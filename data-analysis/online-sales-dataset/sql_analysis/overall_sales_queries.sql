@@ -69,3 +69,14 @@ GROUP BY
 	payment_method
 ORDER BY 
 	sum_total_revenue DESC;
+
+-- find revenue per region
+SELECT 	
+	region,
+	SUM(total_revenue) as sum_total_revenue
+FROM
+	online_sales
+GROUP BY
+	region
+ORDER BY 
+	sum_total_revenue DESC;

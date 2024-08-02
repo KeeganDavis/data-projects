@@ -9,7 +9,29 @@ This repository is an analysis of the [online sales dataset](https://www.kaggle.
 - [Results](#results)
 - [Contributing](#contributing)
 - [License](#license)
-
+## Project Structure
+online-sales-dataset/
+    ├── data/
+    │   ├── processed/
+    │   │   └── sales_data_final.csv
+    │   └── raw/
+    │       └── online_sales_data.csv
+    ├── images
+    ├── notebooks/
+    │   ├── analysis.ipynb
+    │   └── data_preparation.ipynb
+    ├── sql/
+    │   ├── monthly_sales_queries.sql
+    │   ├── overall_sales_queries.sql
+    │   └── sales_schema.sql
+    ├── src/
+    │   ├── analysis.py
+    │   └── data_preparation.py
+    ├── tableau/
+    │   └── online_sales.twb
+    ├── online-sales-dataset-slides.pdf
+    ├── README.md
+    └── requirements.txt
 ## Requirements
 
 - pandas==2.2.1

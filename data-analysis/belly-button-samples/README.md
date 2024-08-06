@@ -1,4 +1,5 @@
 # belly-button-challenge
+**This is a copy of the repo found [here](https://github.com/KeeganDavis/belly-button-challenge)**
 ## Description
 The index.html file displays the data of the belly button samples data found in the samples.json file. The webpage displays an interactive visualization of the subject's data through the use of a bar chart and a bubble plot. There is also a side bar displaying the patient's metadata and a dropdown menu allowing all of the subjects' data to be visualized on their own page. 
 ## Requirements

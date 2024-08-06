@@ -1,4 +1,5 @@
 # Natural Disasters Analysis (2001-2018) 
+**This is a copy of the repo found [here](https://github.com/KeeganDavis/bootcamp-project-3)**
 ## Overview
 - This repo analyzes 71,634 natural disasters from 2001-2018 through the use of visualizations to determine if disasters follow a predictable pattern, impact certain continents more than others, if disasters affect locations with larger populations, and which disasters cause the most damage. In terms of ethical considerations, both datasets are freely available for non-commercial use upon registration for a complimentary account. Importantly, these datasets do not contain any personal information about individuals affected by the natural disasters, ensuring privacy concerns are adequately addressed. Additionally, since the disaster data is publicly accessible, no further ethical considerations were necessary for its utilization.
 ## Data Sources

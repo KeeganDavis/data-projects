@@ -17,6 +17,7 @@ Welcome to my data projects repository. This repository contains a collection of
     - Description: Analyzing the Citi Bike data to identify the most popular starting and ending stations, identify the most popular hours, determine when the longest ride times occur, assess which types of Citi Bikes people use, and compare ride durations and user numbers between members and casual riders.
 7. [Online Sales Dataset](data-analysis/online-sales-dataset/)
     - Description: Analyzing online sales data to uncover insights and trends. This project focuses on product categories, sales volume, revenue distribution, and payment methods to provide actionable recommendations.
+8. []()
 
 
 ## Data Science Projects
@@ -29,6 +30,7 @@ Welcome to my data projects repository. This repository contains a collection of
     - Description: Using supervised machine learning to predict if a loan is high risk or healthy.
 4. [Tennis Match Predictions](data-science/tennis-predictions/)
     - Description: Using random forest and neural networks to predict the winner of tennis matches based on historical match data.
+5. []()
 
 
 

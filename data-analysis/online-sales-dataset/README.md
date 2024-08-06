@@ -1,7 +1,7 @@
 # Online Sales Dataset - Popular Marketplace Data
 
 ## Overview
-This repository is an analysis of the [online sales dataset](https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data) on Kaggle to uncover insights and trends. The analysis focuses on various aspects such as product categories, sales volume, revenue distribution, and payment methods. The goal is to provide actionable recommendations to optimize sales and marketing strategies.
+This repository is an analysis of the [online sales dataset](https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data) on Kaggle to uncover insights and trends using python and SQL. The analysis focuses on various aspects such as product categories, sales volume, revenue distribution, and payment methods. The goal is to provide actionable recommendations to optimize sales and marketing strategies.
 
 [Link to Google Slides Presentation](https://docs.google.com/presentation/d/1tw-eIU5FwjinZmDZ3hHyYeQV29FJjaFbF5qL_HBBMPI/edit?usp=sharing)
 
@@ -44,8 +44,6 @@ online-sales-dataset
  ┣ src
  ┃ ┣ analysis.py
  ┃ ┗ data_preparation.py
- ┣ tableau
- ┃ ┗ online_sales.twb
  ┣ notes.md
  ┣ online-sales-dataset-slides.pdf
  ┣ README.md
@@ -57,6 +55,7 @@ online-sales-dataset
 ### Prerequisites
 - **Python**: Ensure you have Python `3.11.5` installed. If not, you can download it from [python.org](https://www.python.org/downloads/release/python-3115/).
 - **Anaconda**: Ensure you have Anaconda installed. If not, you can download it from [anaconda.com](https://www.anaconda.com/products/individual). This project was set up using Conda version `24.5.0`.
+- **PostgreSQL**: Ensure you have PostgreSQL installed to run the SQL scripts.
 
 ### Setup
 1. Clone the repository:
@@ -71,10 +70,12 @@ conda activate online-sales
 ```
 3. Install the required packages: 
 ```sh
-pip install -r data-analysis/online-sales-dataset/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
+
+### Python Analysis
 1. **Data Preparation**:
     - Run the data preparation script to clean and preprocess the raw data.
 ```sh
@@ -85,6 +86,11 @@ python src/data_preparation.py
 ```sh
 python src/analysis.py
 ```
+### SQL Analysis
+1. **Set Up the Database**:
+    - Use the `sales_schema.sql` file to create the necessary database schema.
+2. **Run the SQL Queries**:
+    - Execute the queries in `overall_sales_queries.sql` and `monthly_sales_queries.sql` to analyze the data.
 
 ## Analysis
 The analysis focuses on several key areas:

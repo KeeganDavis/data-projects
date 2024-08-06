@@ -1,0 +1,91 @@
+:root {
+  --arrow-bg: rgba(12, 12, 12, 0.418);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: white;
+  --select-bg: rgba(63, 63, 63, 0.219);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#vizContainer, #vizRow, body, html {
+  height: 100%;
+  width: 100%;
+}
+
+#allDisastersMap {
+  height: 90%;
+}
+
+.legend {
+  line-height: 18px;
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, .6);
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+}
+
+.legend-span {
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  line-height: 18px; 
+}
+
+.legend.leaflet-control {
+  top: -40px !important;
+}
+
+h5 {
+  text-align: center;
+}
+
+#header {
+  background-image: radial-gradient(#c5ae96, #7f886e);
+  height: 200px;
+  width: 100%;
+}
+
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 15rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: black;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+
+#vizContainer {
+  padding: 50px;
+}

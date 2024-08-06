@@ -1,0 +1,6 @@
+Generated data from https://public.emdat.be/data using the following:
+
+time period: 2000-2024 (as of april 1 2024)
+not including historical events
+
+supposed to have 15687 records

@@ -1,101 +1,101 @@
-rank,title,genre_1,genre_2,genre_3,imdb_rating,year,decade,rating,run_time
-1,The Shawshank Redemption,Drama,,,9.3,1994,90,R,142
-2,The Godfather,Crime,Drama,,9.2,1972,70,R,175
-3,The Dark Knight,Action,Crime,Drama,9.0,2008,00,PG-13,152
-4,The Godfather Part II,Crime,Drama,,9.0,1974,70,R,202
-5,12 Angry Men,Crime,Drama,,9.0,1957,50,Approved,96
-6,Schindler's List,Biography,Drama,History,9.0,1993,90,R,195
-7,The Lord of the Rings: The Return of the King,Action,Adventure,Drama,9.0,2003,00,PG-13,201
-8,Pulp Fiction,Crime,Drama,,8.9,1994,90,R,154
-9,The Lord of the Rings: The Fellowship of the Ring,Action,Adventure,Drama,8.8,2001,00,PG-13,178
-10,"The Good, the Bad and the Ugly",Adventure,Western,,8.8,1966,60,R,178
-11,Forrest Gump,Drama,Romance,,8.8,1994,90,PG-13,142
-12,Fight Club,Drama,,,8.8,1999,90,R,139
-13,The Lord of the Rings: The Two Towers,Action,Adventure,Drama,8.8,2002,00,PG-13,179
-14,Inception,Action,Adventure,Sci-Fi,8.7,2010,10,PG-13,148
-15,Star Wars: Episode V - The Empire Strikes Back,Action,Adventure,Fantasy,8.7,1980,80,PG,124
-16,The Matrix,Action,Sci-Fi,,8.7,1999,90,R,136
-17,Goodfellas,Biography,Crime,Drama,8.7,1990,90,R,145
-18,Spider-Man: Across the Spider-Verse,Animation,Action,Adventure,8.7,2023,20,PG,140
-19,Interstellar,Adventure,Drama,Sci-Fi,8.7,2014,10,PG-13,169
-20,One Flew Over the Cuckoo's Nest,Drama,,,8.6,1975,70,R,133
-21,Se7en,Crime,Drama,Mystery,8.6,1995,90,R,127
-22,It's a Wonderful Life,Drama,Family,Fantasy,8.6,1946,40,PG,130
-23,Seven Samurai,Action,Drama,,8.6,1954,50,Not Rated,207
-24,The Silence of the Lambs,Crime,Drama,Thriller,8.6,1991,90,R,118
-25,Saving Private Ryan,Drama,War,,8.6,1998,90,R,169
-26,City of God,Crime,Drama,,8.6,2002,00,R,130
-27,Life Is Beautiful,Comedy,Drama,Romance,8.6,1997,90,PG-13,116
-28,The Green Mile,Crime,Drama,Fantasy,8.6,1999,90,R,189
-29,Star Wars: Episode IV - A New Hope,Action,Adventure,Fantasy,8.6,1977,70,PG,121
-30,Terminator 2: Judgment Day,Action,Sci-Fi,,8.6,1991,90,R,137
-31,Spirited Away,Animation,Adventure,Family,8.6,2001,00,PG,125
-32,Oppenheimer,Biography,Drama,History,8.6,2023,20,R,180
-33,Harakiri,Action,Drama,Mystery,8.6,1962,60,Not Rated,133
-34,Back to the Future,Adventure,Comedy,Sci-Fi,8.5,1985,80,PG,116
-35,The Pianist,Biography,Drama,Music,8.5,2002,00,R,150
-36,Psycho,Horror,Mystery,Thriller,8.5,1960,60,R,109
-37,Parasite,Drama,Thriller,,8.5,2019,10,R,132
-38,Gladiator,Action,Adventure,Drama,8.5,1994,90,R,155
-39,The Lion King,Animation,Adventure,Drama,8.5,1994,90,G,88
-40,Léon: The Professional,Action,Crime,Drama,8.5,1994,90,R,110
-41,American History X,Crime,Drama,,8.5,2000,00,R,119
-42,The Departed,Crime,Drama,Thriller,8.5,1998,90,R,151
-43,Whiplash,Drama,Music,,8.5,2014,10,R,106
-44,The Prestige,Drama,Mystery,Sci-Fi,8.5,2006,00,PG-13,130
-45,The Usual Suspects,Crime,Drama,Mystery,8.5,1995,90,R,106
-46,Grave of the Fireflies,Animation,,,8.5,1988,80,Not Rated,88
-47,Casablanca,Drama,Romance,War,8.5,1942,40,PG,102
-48,The Intouchables,Biography,Comedy,Drama,8.5,2011,10,R,112
-49,Modern Times,Comedy,Drama,Romance,8.5,1936,30,G,87
-50,Cinema Paradiso,Drama,Romance,,8.5,1988,80,PG,174
-51,Once Upon a Time in the West,Western,,,8.5,1968,60,PG-13,166
-52,Rear Window,Mystery,Thriller,,8.5,1954,50,PG,112
-53,Alien,Horror,Sci-Fi,,8.5,1979,70,R,117
-54,City Lights,Comedy,Drama,Romance,8.5,1931,30,G,87
-55,Django Unchained,Drama,Western,,8.5,2012,10,R,165
-56,Apocalypse Now,Drama,Mystery,War,8.4,1979,70,R,147
-57,Memento,Mystery,Thriller,,8.4,2000,00,R,113
-58,Indiana Jones and the Raiders of the Lost Ark,Action,Adventure,,8.4,1981,80,PG,115
-59,WALL·E,Animation,Adventure,Family,8.4,2008,00,G,98
-60,The Lives of Others,Drama,Mystery,Thriller,8.4,2006,00,R,137
-61,Sunset Blvd.,Drama,Film-Noir,,8.4,1950,50,Approved,110
-62,Paths of Glory,Drama,War,,8.4,1957,50,Approved,88
-63,Avengers: Infinity War,Action,Adventure,Sci-Fi,8.4,2018,10,PG-13,149
-64,The Shining,Drama,Horror,,8.4,1980,80,R,146
-65,The Great Dictator,Comedy,Drama,War,8.4,1940,40,G,125
-66,Witness for the Prosecution,Crime,Drama,Mystery,8.4,1957,50,Approved,116
-67,Spider-Man: Into the Spider-Verse,Animation,Action,Adventure,8.4,2018,10,PG,117
-68,Aliens,Action,Adventure,Sci-Fi,8.4,1986,80,R,137
-69,Inglourious Basterds,Adventure,Drama,War,8.4,2009,00,R,153
-70,The Dark Knight Rises,Action,Drama,,8.4,2012,10,PG-13,164
-71,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,Comedy,War,,8.4,1964,60,PG,95
-72,Oldboy,Action,Drama,Mystery,8.4,2003,00,R,120
-73,Coco,Animation,Adventure,Comedy,8.4,2017,10,PG,105
-74,Amadeus,Biography,Drama,Music,8.4,1984,80,PG,160
-75,The Boat,Drama,War,,8.4,1981,80,Not Rated,149
-76,Avengers: Endgame,Action,Adventure,Drama,8.4,2019,10,PG-13,181
-77,Joker,Crime,Drama,Thriller,8.4,2019,10,R,122
-78,Your Name.,Animation,Drama,Fantasy,8.4,2016,10,Not Rated,106
-79,3 Idiots,Comedy,Drama,,8.4,2009,00,PG-13,170
-80,High and Low,Crime,Drama,Mystery,8.4,1963,60,Not Rated,143
-81,Capernaum,Drama,,,8.4,2018,10,R,126
-82,Come and See,Drama,Thriller,War,8.4,1985,80,Not Rated,142
-83,Toy Story,Animation,Adventure,Comedy,8.3,1995,90,G,81
-84,American Beauty,Drama,,,8.3,1999,90,R,122
-85,Braveheart,Biography,Drama,History,8.3,1995,90,R,178
-86,Princess Mononoke,Animation,Action,Adventure,8.3,1997,90,PG-13,134
-87,Good Will Hunting,Drama,Romance,,8.3,1997,90,R,126
-88,Once Upon a Time in America,Crime,Drama,,8.3,1984,80,R,229
-89,Singin' in the Rain,Comedy,Musical,Romance,8.3,1952,50,G,103
-90,Requiem for a Dream,Drama,,,8.3,2000,00,NC-17,102
-91,Toy Story 3,Animation,Adventure,Comedy,8.3,2010,10,G,103
-92,Star Wars: Episode VI - Return of the Jedi,Action,Adventure,Fantasy,8.3,1983,80,PG,131
-93,Eternal Sunshine of the Spotless Mind,Drama,Romance,Sci-Fi,8.3,2004,00,R,108
-94,2001: A Space Odyssey,Adventure,Sci-Fi,,8.3,1968,60,G,149
-95,The Hunt,Drama,,,8.3,2012,10,R,115
-96,Reservoir Dogs,Crime,Thriller,,8.3,1992,90,R,99
-97,Ikiru,Drama,,,8.3,1952,50,Not Rated,143
-98,Lawrence of Arabia,Adventure,Biography,Drama,8.3,1962,60,PG,218
-99,Citizen Kane,Drama,Mystery,,8.3,1941,40,PG,119
-100,M,Crime,Mystery,Thriller,8.3,1931,30,Passed,99
+rank,title,genre,genre_1,genre_2,genre_3,imdb_rating,year,decade,rating,run_time
+1,The Shawshank Redemption,['Drama'],Drama,,,9.3,1994,90,R,142
+2,The Godfather,"['Crime', 'Drama']",Crime,Drama,,9.2,1972,70,R,175
+3,The Dark Knight,"['Action', 'Crime', 'Drama']",Action,Crime,Drama,9.0,2008,00,PG-13,152
+4,The Godfather Part II,"['Crime', 'Drama']",Crime,Drama,,9.0,1974,70,R,202
+5,12 Angry Men,"['Crime', 'Drama']",Crime,Drama,,9.0,1957,50,Approved,96
+6,Schindler's List,"['Biography', 'Drama', 'History']",Biography,Drama,History,9.0,1993,90,R,195
+7,The Lord of the Rings: The Return of the King,"['Action', 'Adventure', 'Drama']",Action,Adventure,Drama,9.0,2003,00,PG-13,201
+8,Pulp Fiction,"['Crime', 'Drama']",Crime,Drama,,8.9,1994,90,R,154
+9,The Lord of the Rings: The Fellowship of the Ring,"['Action', 'Adventure', 'Drama']",Action,Adventure,Drama,8.8,2001,00,PG-13,178
+10,"The Good, the Bad and the Ugly","['Adventure', 'Western']",Adventure,Western,,8.8,1966,60,R,178
+11,Forrest Gump,"['Drama', 'Romance']",Drama,Romance,,8.8,1994,90,PG-13,142
+12,Fight Club,['Drama'],Drama,,,8.8,1999,90,R,139
+13,The Lord of the Rings: The Two Towers,"['Action', 'Adventure', 'Drama']",Action,Adventure,Drama,8.8,2002,00,PG-13,179
+14,Inception,"['Action', 'Adventure', 'Sci-Fi']",Action,Adventure,Sci-Fi,8.7,2010,10,PG-13,148
+15,Star Wars: Episode V - The Empire Strikes Back,"['Action', 'Adventure', 'Fantasy']",Action,Adventure,Fantasy,8.7,1980,80,PG,124
+16,The Matrix,"['Action', 'Sci-Fi']",Action,Sci-Fi,,8.7,1999,90,R,136
+17,Goodfellas,"['Biography', 'Crime', 'Drama']",Biography,Crime,Drama,8.7,1990,90,R,145
+18,Spider-Man: Across the Spider-Verse,"['Animation', 'Action', 'Adventure']",Animation,Action,Adventure,8.7,2023,20,PG,140
+19,Interstellar,"['Adventure', 'Drama', 'Sci-Fi']",Adventure,Drama,Sci-Fi,8.7,2014,10,PG-13,169
+20,One Flew Over the Cuckoo's Nest,['Drama'],Drama,,,8.6,1975,70,R,133
+21,Se7en,"['Crime', 'Drama', 'Mystery']",Crime,Drama,Mystery,8.6,1995,90,R,127
+22,It's a Wonderful Life,"['Drama', 'Family', 'Fantasy']",Drama,Family,Fantasy,8.6,1946,40,PG,130
+23,Seven Samurai,"['Action', 'Drama']",Action,Drama,,8.6,1954,50,Not Rated,207
+24,The Silence of the Lambs,"['Crime', 'Drama', 'Thriller']",Crime,Drama,Thriller,8.6,1991,90,R,118
+25,Saving Private Ryan,"['Drama', 'War']",Drama,War,,8.6,1998,90,R,169
+26,City of God,"['Crime', 'Drama']",Crime,Drama,,8.6,2002,00,R,130
+27,Life Is Beautiful,"['Comedy', 'Drama', 'Romance']",Comedy,Drama,Romance,8.6,1997,90,PG-13,116
+28,The Green Mile,"['Crime', 'Drama', 'Fantasy']",Crime,Drama,Fantasy,8.6,1999,90,R,189
+29,Star Wars: Episode IV - A New Hope,"['Action', 'Adventure', 'Fantasy']",Action,Adventure,Fantasy,8.6,1977,70,PG,121
+30,Terminator 2: Judgment Day,"['Action', 'Sci-Fi']",Action,Sci-Fi,,8.6,1991,90,R,137
+31,Spirited Away,"['Animation', 'Adventure', 'Family']",Animation,Adventure,Family,8.6,2001,00,PG,125
+32,Oppenheimer,"['Biography', 'Drama', 'History']",Biography,Drama,History,8.6,2023,20,R,180
+33,Harakiri,"['Action', 'Drama', 'Mystery']",Action,Drama,Mystery,8.6,1962,60,Not Rated,133
+34,Back to the Future,"['Adventure', 'Comedy', 'Sci-Fi']",Adventure,Comedy,Sci-Fi,8.5,1985,80,PG,116
+35,The Pianist,"['Biography', 'Drama', 'Music']",Biography,Drama,Music,8.5,2002,00,R,150
+36,Psycho,"['Horror', 'Mystery', 'Thriller']",Horror,Mystery,Thriller,8.5,1960,60,R,109
+37,Parasite,"['Drama', 'Thriller']",Drama,Thriller,,8.5,2019,10,R,132
+38,Gladiator,"['Action', 'Adventure', 'Drama']",Action,Adventure,Drama,8.5,1994,90,R,155
+39,The Lion King,"['Animation', 'Adventure', 'Drama']",Animation,Adventure,Drama,8.5,1994,90,G,88
+40,Léon: The Professional,"['Action', 'Crime', 'Drama']",Action,Crime,Drama,8.5,1994,90,R,110
+41,American History X,"['Crime', 'Drama']",Crime,Drama,,8.5,2000,00,R,119
+42,The Departed,"['Crime', 'Drama', 'Thriller']",Crime,Drama,Thriller,8.5,1998,90,R,151
+43,Whiplash,"['Drama', 'Music']",Drama,Music,,8.5,2014,10,R,106
+44,The Prestige,"['Drama', 'Mystery', 'Sci-Fi']",Drama,Mystery,Sci-Fi,8.5,2006,00,PG-13,130
+45,The Usual Suspects,"['Crime', 'Drama', 'Mystery']",Crime,Drama,Mystery,8.5,1995,90,R,106
+46,Grave of the Fireflies,['Animation'],Animation,,,8.5,1988,80,Not Rated,88
+47,Casablanca,"['Drama', 'Romance', 'War']",Drama,Romance,War,8.5,1942,40,PG,102
+48,The Intouchables,"['Biography', 'Comedy', 'Drama']",Biography,Comedy,Drama,8.5,2011,10,R,112
+49,Modern Times,"['Comedy', 'Drama', 'Romance']",Comedy,Drama,Romance,8.5,1936,30,G,87
+50,Cinema Paradiso,"['Drama', 'Romance']",Drama,Romance,,8.5,1988,80,PG,174
+51,Once Upon a Time in the West,['Western'],Western,,,8.5,1968,60,PG-13,166
+52,Rear Window,"['Mystery', 'Thriller']",Mystery,Thriller,,8.5,1954,50,PG,112
+53,Alien,"['Horror', 'Sci-Fi']",Horror,Sci-Fi,,8.5,1979,70,R,117
+54,City Lights,"['Comedy', 'Drama', 'Romance']",Comedy,Drama,Romance,8.5,1931,30,G,87
+55,Django Unchained,"['Drama', 'Western']",Drama,Western,,8.5,2012,10,R,165
+56,Apocalypse Now,"['Drama', 'Mystery', 'War']",Drama,Mystery,War,8.4,1979,70,R,147
+57,Memento,"['Mystery', 'Thriller']",Mystery,Thriller,,8.4,2000,00,R,113
+58,Indiana Jones and the Raiders of the Lost Ark,"['Action', 'Adventure']",Action,Adventure,,8.4,1981,80,PG,115
+59,WALL·E,"['Animation', 'Adventure', 'Family']",Animation,Adventure,Family,8.4,2008,00,G,98
+60,The Lives of Others,"['Drama', 'Mystery', 'Thriller']",Drama,Mystery,Thriller,8.4,2006,00,R,137
+61,Sunset Blvd.,"['Drama', 'Film-Noir']",Drama,Film-Noir,,8.4,1950,50,Approved,110
+62,Paths of Glory,"['Drama', 'War']",Drama,War,,8.4,1957,50,Approved,88
+63,Avengers: Infinity War,"['Action', 'Adventure', 'Sci-Fi']",Action,Adventure,Sci-Fi,8.4,2018,10,PG-13,149
+64,The Shining,"['Drama', 'Horror']",Drama,Horror,,8.4,1980,80,R,146
+65,The Great Dictator,"['Comedy', 'Drama', 'War']",Comedy,Drama,War,8.4,1940,40,G,125
+66,Witness for the Prosecution,"['Crime', 'Drama', 'Mystery']",Crime,Drama,Mystery,8.4,1957,50,Approved,116
+67,Spider-Man: Into the Spider-Verse,"['Animation', 'Action', 'Adventure']",Animation,Action,Adventure,8.4,2018,10,PG,117
+68,Aliens,"['Action', 'Adventure', 'Sci-Fi']",Action,Adventure,Sci-Fi,8.4,1986,80,R,137
+69,Inglourious Basterds,"['Adventure', 'Drama', 'War']",Adventure,Drama,War,8.4,2009,00,R,153
+70,The Dark Knight Rises,"['Action', 'Drama']",Action,Drama,,8.4,2012,10,PG-13,164
+71,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,"['Comedy', 'War']",Comedy,War,,8.4,1964,60,PG,95
+72,Oldboy,"['Action', 'Drama', 'Mystery']",Action,Drama,Mystery,8.4,2003,00,R,120
+73,Coco,"['Animation', 'Adventure', 'Comedy']",Animation,Adventure,Comedy,8.4,2017,10,PG,105
+74,Amadeus,"['Biography', 'Drama', 'Music']",Biography,Drama,Music,8.4,1984,80,PG,160
+75,The Boat,"['Drama', 'War']",Drama,War,,8.4,1981,80,Not Rated,149
+76,Avengers: Endgame,"['Action', 'Adventure', 'Drama']",Action,Adventure,Drama,8.4,2019,10,PG-13,181
+77,Joker,"['Crime', 'Drama', 'Thriller']",Crime,Drama,Thriller,8.4,2019,10,R,122
+78,Your Name.,"['Animation', 'Drama', 'Fantasy']",Animation,Drama,Fantasy,8.4,2016,10,Not Rated,106
+79,3 Idiots,"['Comedy', 'Drama']",Comedy,Drama,,8.4,2009,00,PG-13,170
+80,High and Low,"['Crime', 'Drama', 'Mystery']",Crime,Drama,Mystery,8.4,1963,60,Not Rated,143
+81,Capernaum,['Drama'],Drama,,,8.4,2018,10,R,126
+82,Come and See,"['Drama', 'Thriller', 'War']",Drama,Thriller,War,8.4,1985,80,Not Rated,142
+83,Toy Story,"['Animation', 'Adventure', 'Comedy']",Animation,Adventure,Comedy,8.3,1995,90,G,81
+84,American Beauty,['Drama'],Drama,,,8.3,1999,90,R,122
+85,Braveheart,"['Biography', 'Drama', 'History']",Biography,Drama,History,8.3,1995,90,R,178
+86,Princess Mononoke,"['Animation', 'Action', 'Adventure']",Animation,Action,Adventure,8.3,1997,90,PG-13,134
+87,Good Will Hunting,"['Drama', 'Romance']",Drama,Romance,,8.3,1997,90,R,126
+88,Once Upon a Time in America,"['Crime', 'Drama']",Crime,Drama,,8.3,1984,80,R,229
+89,Singin' in the Rain,"['Comedy', 'Musical', 'Romance']",Comedy,Musical,Romance,8.3,1952,50,G,103
+90,Requiem for a Dream,['Drama'],Drama,,,8.3,2000,00,NC-17,102
+91,Toy Story 3,"['Animation', 'Adventure', 'Comedy']",Animation,Adventure,Comedy,8.3,2010,10,G,103
+92,Star Wars: Episode VI - Return of the Jedi,"['Action', 'Adventure', 'Fantasy']",Action,Adventure,Fantasy,8.3,1983,80,PG,131
+93,Eternal Sunshine of the Spotless Mind,"['Drama', 'Romance', 'Sci-Fi']",Drama,Romance,Sci-Fi,8.3,2004,00,R,108
+94,2001: A Space Odyssey,"['Adventure', 'Sci-Fi']",Adventure,Sci-Fi,,8.3,1968,60,G,149
+95,The Hunt,['Drama'],Drama,,,8.3,2012,10,R,115
+96,Reservoir Dogs,"['Crime', 'Thriller']",Crime,Thriller,,8.3,1992,90,R,99
+97,Ikiru,['Drama'],Drama,,,8.3,1952,50,Not Rated,143
+98,Lawrence of Arabia,"['Adventure', 'Biography', 'Drama']",Adventure,Biography,Drama,8.3,1962,60,PG,218
+99,Citizen Kane,"['Drama', 'Mystery']",Drama,Mystery,,8.3,1941,40,PG,119
+100,M,"['Crime', 'Mystery', 'Thriller']",Crime,Mystery,Thriller,8.3,1931,30,Passed,99

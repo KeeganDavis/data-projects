@@ -1,4 +1,4 @@
-rank,title,genre,genre_1,genre_2,genre_3,imdb_rating,year,decade,rating,run_time
+rank,title,genre,genre_1,genre_2,genre_3,imdb_rating,year,decade,mpaa_rating,run_time
 1,The Shawshank Redemption,['Drama'],Drama,,,9.3,1994,1990,R,142
 2,The Godfather,"['Crime', 'Drama']",Crime,Drama,,9.2,1972,1970,R,175
 3,The Dark Knight,"['Action', 'Crime', 'Drama']",Action,Crime,Drama,9.0,2008,2000,PG-13,152

@@ -61,7 +61,7 @@ online-sales-dataset
 1. Clone the repository:
 ```sh
 git clone git@github.com:KeeganDavis/data-projects.git
-cd data-projects/data-analysis/online-sales-dataset
+cd data-projects/online-sales-dataset
 ```
 2. Create and activate a new Conda environment:
 ```sh

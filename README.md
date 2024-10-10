@@ -2,6 +2,10 @@
 Welcome to my data projects repository. This repository contains a collection of my data projects, where I use various tools and coding languages such as SQL, Python, Tableau, and Excel to analyze data and create visualizations, uncovering insights and trends.
 
 ## Projects
+1. [80 Cereals Analysis](80-cereals/)
+    - **Category**: Data Analysis, Data Visualization
+    - **Coding Languages and Programs Used**: Excel
+    - **Description**: 
 
 1. [Belly Button Samples](belly-button-samples/)
     - **Category**: Data Analysis, Data Visualization

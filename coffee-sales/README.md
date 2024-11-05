@@ -1,7 +1,7 @@
-# Online Sales Dataset - Popular Marketplace Data
+# Coffee Sales
 
 ## Overview
-This repository is an analysis of the [80 cereals](https://www.kaggle.com/datasets/crawford/80-cereals?resource=download) on Kaggle to uncover insights and trends using Excel.
+This repository is an analysis of the [Coffee Sales](https://www.kaggle.com/datasets/ihelon/coffee-sales) dataset on Kaggle to uncover insights and trends using Excel.
 
 ## Table of Contents
 - [Project Structure](#project-structure)
@@ -13,7 +13,7 @@ This repository is an analysis of the [80 cereals](https://www.kaggle.com/datase
 
 ## Project Structure
 ```
-80-cereals
+coffee-sales
  ```
 
 ## Installation
@@ -25,7 +25,7 @@ This repository is an analysis of the [80 cereals](https://www.kaggle.com/datase
 1. Clone the repository:
 ```sh
 git clone git@github.com:KeeganDavis/data-projects.git
-cd data-projects/80-cereals
+cd data-projects/coffee-sales
 ```
 
 ## Usage

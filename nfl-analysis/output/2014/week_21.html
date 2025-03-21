@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NFL scores for week 21 of the 2014 season." />
+    <meta name="keywords" content="data analysis, nfl stats, nfl analysis" />
+    <meta name="author" content="Keegan Davis" />
+ 
+    <!-- Title -->
+    
+        <title>NFL - 2014 Super Bowl</title>
+    
+
+    <!-- Favicon (Multiple Sizes) -->
+    <!-- Standard .ico favicon -->
+    <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <!-- For different devices (optional) -->
+    <!-- <link rel="icon" sizes="16x16" href="path/to/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="path/to/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png" /> -->
+
+    <!-- CSS Reset / Normalize (ensures consistent styling across browsers) -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-oHDEc8XedRZRfDU24gxYbdZdjfglA+7Lb+OkoR//4F7efaUD6K5IZyB5Aw4SD7oZURRshfZUnPrNZ5pB1ZHRvA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    />
+
+    <!-- home stylesheet -->
+    <link rel="stylesheet" href="../../static/css/nfl.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="sticky-top">
+        <div class="container d-flex align-items-center py-3">
+        <!-- Logo -->
+        
+        <h1 class="m-0">NFL Stats and Analysis</h1>
+        <!-- nav -->
+        <nav class="ms-auto">
+            <ul class="nav_menu list-unstyled m-0">
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="../homepage.html">Seasons Directory</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Players (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Teams (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block">
+                <a class="nav_menu_link" href="../../index.html">About</a>
+            </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div id="wrap" class="container py-4">
+        
+            <h1>2014 Super Bowl</h1>
+        
+        
+            <p class="mt-0">* Some teams have undergone name and/or location changes over the years, such as the Raiders, Rams, Chargers, and Commanders.
+                Data reflects their performance regardless of rebranding or relocation.
+            </p>
+        
+
+        <!-- Section 2: Game Cards -->
+        <section>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
+                
+                <!-- Card -->
+                <div class="col">
+                        <div class="game_card default_card">
+                            <!-- Top of card -->
+                            <div class="card_top px-3 text-center" style="background: linear-gradient(to right, #002244  50%, #002244  50%);">
+                                <div class="row align-items-stretch">
+                                    <div class="col-6 col-divider py-1 away_team_info" style="color: #C60C30 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 193.09062 94.075104" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><g transform="matrix(1.25 0 0 -1.25 -286.64 543.05)"><g><path d="m381 424.68c-19.236-4.543-20.077 6.5978-49.007 8.6405-38.941 2.75-71.664-14.216-97.815-16.39-5.6811-0.47242-4.9443-5.2007-0.86163-6.0032 9.8564-2.3004 20.027-2.0078 29.336-0.75962-0.3127-0.75025-0.62675-1.9058 0.41338-2.7916 3.6868-3.1338 18.508-3.4022 25.014-3.0278 2.2091 0.12614 6.9253 0.57174 6.9253 0.57174-1.3448-0.1275-3.4465-4.2263 0.99718-5.3805 27.462-7.6889 40.383-20.105 55.216-39.659 6.0274 0.77038 11.703 8.0231 9.2834 13.559l1.2025 2.9714 4.4397 2.0561-1.2723 9.9168 6.7682 3.1875s10.541 28.329 11.158 30.392c0.61737 2.0628-0.66032 2.9848-1.7971 2.7164" fill="#fff"/><path d="m307.98 409.77c7.7185 0.82943 14.526 0.56635 21.946-3.9579-15.476 1.679-23.053-2.644-32.699-3.6049 34.077-8.9424 46.554-28.051 55.004-38.641 5.9066 2.5098 6.226 7.642 4.7215 9.4739l1.5206 3.26 0.0698 2.0937 4.072 1.9044-1.2884 10.145 7.6245 3.1231 10.102 27.653c-17.116-3.5512-22.661 7.5171-47.013 9.027-9.9195 0.61602-18.853 0.15969-27.239-0.94083l1.3676-8.4646c5.6046 0.19325 10.88-0.5194 15.887-2.797-5.504 0.3409-10.456-0.11542-15.288-1.012l1.2133-7.2621" fill="#024"/><path d="m92.408 6.6875c-29.967 4.2445-54.536 14.904-86.764 19.254 36.362 5.995 64.919-7.456 88.719-8.862l-1.955-10.392zm2.903 15.382c-15.648 3.124-29.863 9.482-48.856 9.998 22.034 4.153 37.308 0.47 50.473-1.082l-1.617-8.916z" transform="matrix(.8 0 0 -.8 229.31 434.44)" fill="#c60c30"/><path d="m334.26 386.44c9.2109-6.4502 13.942-13.597 18.742-19.852 2.4413 1.0146 3.2076 3.8478 2.4037 4.849l-2.3245 2.8614 2.6439-0.15568 1.2133 2.1084-3.2868 0.1946-3.7028-0.66837 3.7552 2.5715 2.8587-0.16778 0.10602 1.628-2.9204 1.3985 1.0039 1.0978 5.402-0.33688-1.5528 12.031c-2.1353 0.26035-3.931-0.85895-4.7068-3.9471l-9.5759 0.56369c1.3475 3.0546 3.4465 4.429 7.4299 3.9216-2.2346 3.1298-13.124 3.4197-14.662-1.4911l8.4539-6.9279 1.0938-6.3321-3.4734 5.041c-3.1231 2.7043-6.4032 4.5994-8.9009 1.6132" fill="#b0b7bc"/><path d="m362.6 417.46 0.68045-6.0422 6.8018-2.5527-6.3804-1.5984 0.62946-8.1466-5.5174 6.8837-8.2499-1.9434 5.0973 5.9375-4.2035 5.5697 7.042-2.4171 4.1001 4.3095" fill="#fff"/></g></g></svg>
+
+                                        <div class="away_team city mt-1 fs-4 fw-bold">New England</div>
+                                        <div class="away_team name fs-4 fw-bold">Patriots</div>
+                                        
+                                            <div class="away_team record py-1 fw-bold fs-5">15 - 4</div>
+                                        
+                                        <div class="away_team score py-0 fw-bold fs-4">28</div>
+                                    </div>
+                                    <div class="col-6 py-1 home_team_info" style="color: #69BE28 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 143.9383 63.71997" height="89.988" width="100%"><path d="M120.6583,52.2a108.31728,108.31728,0,0,0-18.84-1.56006h-86.52c-5.4,0-11.04,0-13.8-4.43994-3-4.44006-1.32-8.88,3.48-17.64.36-.72,15.24-28.56,15.24-28.56a27.16881,27.16881,0,0,0,3,3.12c1.56,1.2,3.12,1.8,7.2,1.8,7.32,0,54.72-.12,55.2-.12,9.6,0,19.32.96,25.56,7.92,3.36.36,13.8,1.68,22.56,5.88,5.04,2.4,8.4,6,9.72,10.44a16.10984,16.10984,0,0,1,.48,4.2c0,4.2-1.56,8.88-4.56,13.8-6.6,10.2-12.6,13.8-12.84,13.92a14.77676,14.77676,0,0,1-7.32,2.76,24.2012,24.2012,0,0,0,4.32-7.32C124.61829,52.68,120.6583,52.2,120.6583,52.2Z" fill="#fff"/><path d="M132.6583,20.88c-9.96-4.8-22.68-5.76-22.68-5.76-5.52-6.84-14.88-7.8-24.36-7.8,0,0-47.76.12-55.2.12-8.64,0-9.48-3.48-9.48-3.48L9.2983,25.68h30.12c9.48,0,9.96-.96,16.2-5.64,6.72-4.92,12-6.6,18.36-6.6,6.24,0,10.44,1.31995,17.52,4.44,6.96,3.12,10.68,4.68,14.88,2.87994,0,0-3.24,4.44006-13.2.24005-9.96-4.08-12.6-5.04-18.72-5.04-5.88,0-12.72,2.88-21.24,11.4l10.2,8.16s-2.4,3.72-3.96,6-1.44,3.84-.6,5.04c.84,1.08,1.92,1.56,5.64,1.56h37.32a114.03973,114.03973,0,0,1,19.32,1.68c9.6,1.92,3.36,9.96,3.36,9.96s6.48-4.2,12.72-14.16C144.29828,34.56,142.49829,25.56,132.6583,20.88Z" fill="#024"/><path d="M115.13829,22.56c-4.44-1.08-.6-3.6-.6-3.6a13.12381,13.12381,0,0,0-9.48,8.04c-.12.24-.24.36-.36.6-3.6,7.2-6.84,6.84-12.96,6.84h-10.44c-8.52,0-12.48,4.2-16.56,11.4h4.8c4.44-6.6,7.68-8.28,16.44-8.76,19.8,0,35.52,5.64,43.92,9.96C141.77829,27.12,124.13829,23.87994,115.13829,22.56Z" fill="#fff"/><path d="M78.29829,45.72c2.16-3.36,6.72-4.44,13.92-4.08,18,1.08,28.32,4.56006,36.24,7.56006-9.84-5.76-27.48-9.96-39.72-9.96-5.88,0-11.16,1.08-14.16,6.48Z" fill="#fff"/><path d="M97.49829,25.92c-2.28,3.36-5.4,4.44-14.16,3.84-10.08-.72-7.44-5.04-6.36-7.08h0c.36-.6.84-1.68,1.44-2.64-7.8-.48-13.44,5.52-13.44,5.52,5.76,5.76,9.6,6.36,14.88,6.36h9.84c9.12,0,11.28-4.08,12.12-6A13.02829,13.02829,0,0,1,97.49829,25.92Z" fill="#fff"/><path d="M93.05829,24.96a2.0275,2.0275,0,0,1-.6-.24,4.37811,4.37811,0,0,1-3.84,1.32c-2.04-.24-3.12-1.68-2.52-3.12a1.70544,1.70544,0,0,1,.24-.72c-.96-.36-2.04-.72-3-1.08-2.04,3.24-3.12,5.4,3.84,6,4.32.36,5.52-.36,6.48-1.92C93.41829,25.08,93.29828,25.08,93.05829,24.96Z" fill="#69be28"/><path d="M57.8983,37.44c-3.6,6.24-5.04,7.68-2.52,10.68h-40.08c-6,0-9.84-.24-11.76-3.24s-1.56-5.76,3.6-15.12006h34.08c5.88,0,7.44.36,10.56,2.76C55.01829,35.04,57.8983,37.44,57.8983,37.44Z" fill="#a5acaf"/></svg>
+
+                                        <div class="home_team city mt-1 fs-4 fw-bold">Seattle</div>
+                                        <div class="home_team name fs-4 fw-bold">Seahawks</div>
+                                        
+                                            <div class="home_team record py-1 fw-bold fs-5">14 - 5</div>
+                                        
+                                        <div class="home_team score py-0 fw-bold fs-4">24</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date and Time -->
+                            <div class="datetime text-center py-2">
+                                <div>Sunday, February 01, 2015</div>
+                                <div class="py-1">05:30 PM</div>
+                            </div>
+                            <!-- Table for Betting -->
+                            <div class="card_bottom py-1">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="light-table-container">
+                                        <table class="light-table mb-4">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th scope="col">Team</th>
+                                                    <th scope="col">Spread</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">ML</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr class="text-left">
+                                                    <td><img src="../../nfl_logos/patriots.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>NWE</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-danger-subtle">0.0  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-success-subtle">o47.0  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-success-subtle">NWE</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../nfl_logos/seahawks.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>SEA</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-success-subtle">0.0  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-danger-subtle">u47.0  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-danger-subtle">SEA </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <a href="week_21/2014wk21nwesea.html"><button class="btn">Stats</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                </div>
+                
+        
+    </div> 
+
+        <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Home JS -->
+    <script src="../../static/js/nfl.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Season and week directory for NFL games 2009-2024" />
+    <meta name="keywords" content="data analysis, nfl analysis, nfl stats" />
+    <meta name="author" content="Keegan Davis" />
+ 
+    <!-- Title -->
+    <title>NFL Game Archive</title>
+
+    <!-- Favicon (Multiple Sizes) -->
+    <!-- Standard .ico favicon -->
+    <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <!-- For different devices (optional) -->
+    <!-- <link rel="icon" sizes="16x16" href="path/to/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="path/to/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png" /> -->
+
+    <!-- CSS Reset / Normalize (ensures consistent styling across browsers) -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-oHDEc8XedRZRfDU24gxYbdZdjfglA+7Lb+OkoR//4F7efaUD6K5IZyB5Aw4SD7oZURRshfZUnPrNZ5pB1ZHRvA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    />
+
+    <!-- home stylesheet -->
+    <link rel="stylesheet" href="../static/css/nfl.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="sticky-top">
+        <div class="container d-flex align-items-center py-3">
+        <!-- Logo -->
+        {# <img src="../nfl_logos/cardinals.png" alt="Logo" class="me-3" style="height: 50px;" /> #}
+        <h1 class="m-0">NFL Stats and Analysis</h1>
+        <!-- nav -->
+        <nav class="ms-auto">
+            <ul class="nav_menu list-unstyled m-0">
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Seasons Directory</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Players (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Teams (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block">
+                <a class="nav_menu_link" href="../index.html">About</a>
+            </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div id="wrap" class="container py-4">
+        <section class="text-center">
+            <h2>Seasons Directory</h2>
+        </section>
+        <!-- Section 2: Nested List Group for Years and Weeks-->
+        <section>
+            <div class="container mt-4">
+                <div class="row">
+                    {% for year, weeks in season_data.items() %}
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="accordion" id="accordion-{{ year }}">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ year }}" aria-expanded="false">
+                                        <h3>{{ year }} Season</h3>
+                                    </button>
+                                </h2>
+                                <div id="collapse-{{ year }}" class="accordion-collapse collapse" data-bs-parent="#accordion-{{ year }}">
+                                    <div class="accordion-body">
+                                        <div class="week-list">
+                                            {% for week in weeks %}
+                                                {% if week.weekName == 'wild_card' %}
+                                                    <a href="{{ year }}/week_{{ week.weekNumber }}.html" class="list-group-item">Wild Card Round</a>
+                                                {% elif week.weekName == 'divisional' %}
+                                                    <a href="{{ year }}/week_{{ week.weekNumber }}.html" class="list-group-item">Divisional Round</a>
+                                                {% elif week.weekName == 'conf_champ' %}
+                                                    <a href="{{ year }}/week_{{ week.weekNumber }}.html" class="list-group-item">Conference Championships</a>
+                                                {% elif week.weekName == 'super_bowl' %}
+                                                    <a href="{{ year }}/week_{{ week.weekNumber }}.html" class="list-group-item">Super Bowl</a>
+                                                {% else %}
+                                                    <a href="{{ year }}/week_{{ week.weekNumber }}.html" class="list-group-item">Week {{ week.weekName }}</a>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+        <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Home JS -->
+    <script src="../static/js/nfl.js"></script>
+
+</body>
+</html>

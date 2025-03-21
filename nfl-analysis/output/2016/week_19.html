@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NFL scores for week 19 of the 2016 season." />
+    <meta name="keywords" content="data analysis, nfl stats, nfl analysis" />
+    <meta name="author" content="Keegan Davis" />
+ 
+    <!-- Title -->
+    
+        <title>NFL - 2016 Divisional Round</title>
+    
+
+    <!-- Favicon (Multiple Sizes) -->
+    <!-- Standard .ico favicon -->
+    <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <!-- For different devices (optional) -->
+    <!-- <link rel="icon" sizes="16x16" href="path/to/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="path/to/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png" /> -->
+
+    <!-- CSS Reset / Normalize (ensures consistent styling across browsers) -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-oHDEc8XedRZRfDU24gxYbdZdjfglA+7Lb+OkoR//4F7efaUD6K5IZyB5Aw4SD7oZURRshfZUnPrNZ5pB1ZHRvA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    />
+
+    <!-- home stylesheet -->
+    <link rel="stylesheet" href="../../static/css/nfl.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="sticky-top">
+        <div class="container d-flex align-items-center py-3">
+        <!-- Logo -->
+        
+        <h1 class="m-0">NFL Stats and Analysis</h1>
+        <!-- nav -->
+        <nav class="ms-auto">
+            <ul class="nav_menu list-unstyled m-0">
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="../homepage.html">Seasons Directory</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Players (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Teams (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block">
+                <a class="nav_menu_link" href="../../index.html">About</a>
+            </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div id="wrap" class="container py-4">
+        
+            <h1>2016 Divisional Round</h1>
+        
+        
+            <p class="mt-0">* Some teams have undergone name and/or location changes over the years, such as the Raiders, Rams, Chargers, and Commanders.
+                Data reflects their performance regardless of rebranding or relocation.
+            </p>
+        
+
+        <!-- Section 2: Game Cards -->
+        <section>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
+                
+                <!-- Card -->
+                <div class="col">
+                        <div class="game_card default_card">
+                            <!-- Top of card -->
+                            <div class="card_top px-3 text-center" style="background: linear-gradient(to right, #002244  50%, #A71930  50%);">
+                                <div class="row align-items-stretch">
+                                    <div class="col-6 col-divider py-1 away_team_info" style="color: #69BE28 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 143.9383 63.71997" height="89.988" width="100%"><path d="M120.6583,52.2a108.31728,108.31728,0,0,0-18.84-1.56006h-86.52c-5.4,0-11.04,0-13.8-4.43994-3-4.44006-1.32-8.88,3.48-17.64.36-.72,15.24-28.56,15.24-28.56a27.16881,27.16881,0,0,0,3,3.12c1.56,1.2,3.12,1.8,7.2,1.8,7.32,0,54.72-.12,55.2-.12,9.6,0,19.32.96,25.56,7.92,3.36.36,13.8,1.68,22.56,5.88,5.04,2.4,8.4,6,9.72,10.44a16.10984,16.10984,0,0,1,.48,4.2c0,4.2-1.56,8.88-4.56,13.8-6.6,10.2-12.6,13.8-12.84,13.92a14.77676,14.77676,0,0,1-7.32,2.76,24.2012,24.2012,0,0,0,4.32-7.32C124.61829,52.68,120.6583,52.2,120.6583,52.2Z" fill="#fff"/><path d="M132.6583,20.88c-9.96-4.8-22.68-5.76-22.68-5.76-5.52-6.84-14.88-7.8-24.36-7.8,0,0-47.76.12-55.2.12-8.64,0-9.48-3.48-9.48-3.48L9.2983,25.68h30.12c9.48,0,9.96-.96,16.2-5.64,6.72-4.92,12-6.6,18.36-6.6,6.24,0,10.44,1.31995,17.52,4.44,6.96,3.12,10.68,4.68,14.88,2.87994,0,0-3.24,4.44006-13.2.24005-9.96-4.08-12.6-5.04-18.72-5.04-5.88,0-12.72,2.88-21.24,11.4l10.2,8.16s-2.4,3.72-3.96,6-1.44,3.84-.6,5.04c.84,1.08,1.92,1.56,5.64,1.56h37.32a114.03973,114.03973,0,0,1,19.32,1.68c9.6,1.92,3.36,9.96,3.36,9.96s6.48-4.2,12.72-14.16C144.29828,34.56,142.49829,25.56,132.6583,20.88Z" fill="#024"/><path d="M115.13829,22.56c-4.44-1.08-.6-3.6-.6-3.6a13.12381,13.12381,0,0,0-9.48,8.04c-.12.24-.24.36-.36.6-3.6,7.2-6.84,6.84-12.96,6.84h-10.44c-8.52,0-12.48,4.2-16.56,11.4h4.8c4.44-6.6,7.68-8.28,16.44-8.76,19.8,0,35.52,5.64,43.92,9.96C141.77829,27.12,124.13829,23.87994,115.13829,22.56Z" fill="#fff"/><path d="M78.29829,45.72c2.16-3.36,6.72-4.44,13.92-4.08,18,1.08,28.32,4.56006,36.24,7.56006-9.84-5.76-27.48-9.96-39.72-9.96-5.88,0-11.16,1.08-14.16,6.48Z" fill="#fff"/><path d="M97.49829,25.92c-2.28,3.36-5.4,4.44-14.16,3.84-10.08-.72-7.44-5.04-6.36-7.08h0c.36-.6.84-1.68,1.44-2.64-7.8-.48-13.44,5.52-13.44,5.52,5.76,5.76,9.6,6.36,14.88,6.36h9.84c9.12,0,11.28-4.08,12.12-6A13.02829,13.02829,0,0,1,97.49829,25.92Z" fill="#fff"/><path d="M93.05829,24.96a2.0275,2.0275,0,0,1-.6-.24,4.37811,4.37811,0,0,1-3.84,1.32c-2.04-.24-3.12-1.68-2.52-3.12a1.70544,1.70544,0,0,1,.24-.72c-.96-.36-2.04-.72-3-1.08-2.04,3.24-3.12,5.4,3.84,6,4.32.36,5.52-.36,6.48-1.92C93.41829,25.08,93.29828,25.08,93.05829,24.96Z" fill="#69be28"/><path d="M57.8983,37.44c-3.6,6.24-5.04,7.68-2.52,10.68h-40.08c-6,0-9.84-.24-11.76-3.24s-1.56-5.76,3.6-15.12006h34.08c5.88,0,7.44.36,10.56,2.76C55.01829,35.04,57.8983,37.44,57.8983,37.44Z" fill="#a5acaf"/></svg>
+
+                                        <div class="away_team city mt-1 fs-4 fw-bold">Seattle</div>
+                                        <div class="away_team name fs-4 fw-bold">Seahawks</div>
+                                        
+                                            <div class="away_team record py-1 fw-bold fs-5">11 - 6 - 1</div>
+                                        
+                                        <div class="away_team score py-0 fw-bold fs-4">20</div>
+                                    </div>
+                                    <div class="col-6 py-1 home_team_info" style="color: #000000 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 192.01146 182.32422" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><g transform="matrix(1.25 0 0 -1.25 -285.01 584.93)"><g transform="translate(.79560 .79560)"><path d="m370.59 435.4c-20.475 12.925-67.373 22.811-102.36 30.943l-40.221-43.232 34.525 0.73755c-17.191-27.773-13.688-93.083 29.784-101.76-2.2381 4.2899-6.1239 12.171-1.0867 21.928 3.5876 6.9399 23.533 45.092 23.533 45.092h4.7744c6.4652 0 8.5935-2.4303 5.7258-5.8572 17.234 0.2197 27.817 6.7359 32.565 13.699-3.6151 6.6143-15.116 14.402-19.778 17.558h24.113c6.9144 0 8.4738-2.8972 6.8458-6.0513 11.285 2.2185 17.054 17.177 1.5751 26.948" fill="#a5acaf"/><path d="m367.83 434.08c-27.887 15.641-96.939 26.067-96.939 26.067l-29.58-31.685h30.669c-22.644-29.919-17.626-90.315 15.673-102.87-2.3617 5.6159-3.5582 12.134 0.6983 20.427 4.8038 9.3526 12.45 25.074 23.403 46.063h8.9387c7.4186 0 9.79-3.1365 8.7838-5.557 6.1004 0 17.254 0.59828 25.347 10.42-6.7418 9.4193-29.035 20.402-29.035 20.402h38.244c5.6198 0 8.4287-1.9988 7.652-5.3844 9.7704 4.7705 7.2302 15.902-3.8544 22.118" fill="#fff"/><path d="m51.164 13.266 3.3672 4.2832-21.525 23.172 75.703 5.7891c-0.13977 0.27462-0.27965 0.55543-0.42187 0.83984h-50.846l3.9375 3.7148c-3.2145 4.5238-5.953 9.4107-8.248 14.525l42.516-8.6875c-0.23048 0.33838-0.46 0.68163-0.68555 1.0273l-50.652 16.881 4.4531 2.5215c-2.095 6.952-3.451 14.153-4.101 21.357l43.037-26.121c-0.1275 0.39478-0.25341 0.79029-0.37109 1.1875l-47.459 37.447 4.377 1.0977c0.24519 8.1208 1.3846 16.037 3.3633 23.383l38.633-45.539c0.06375 0.36288 0.13394 0.72745 0.21484 1.0879l-38.264 56.151 3.6016 0.24609c4.4355 9.9793 10.737 18.166 18.762 23.254-3.0968-6.8899-2.1102-15.16 1.4844-22.525 3.1139-6.375 43.68-87.152 43.68-87.152l-6.7734-3.6289h63.031c6.4535 0 10.03 2.7105 9.959 6.3516 3.9892-3.3665 4.8792-13.564-8.6113-20.967-29.32-16.092-122.17-29.697-122.17-29.697zm67.033 49.264 0.88085 2.6133c-2.0792 4.0677-9.5314 18.834-12.113 24h19.338c0.26235 3.4253 3.6645 6.3312 7.1953 7.1035-2.0915-2.7952-1.2606-5.5686 0.29883-7.1035h9.1328c2.5378 0 1.756 3.0464-2.373 6.2168 6.4608-1.4761 11.286-4.4156 14.441-8.6133-5.99-9.1432-36.801-24.217-36.801-24.217z" transform="matrix(.8 0 0 -.8 228.01 466.34)"/><path d="m369.34 427.33 0.6473-2.8638c-4.4134-0.82975-12.222-1.4908-14.429-1.6693-0.10787-0.2197-0.2197-0.43941-0.33345-0.66498h11.624c4.6116 0 6.5535-2.1871 6.9634-3.4444 0.60415 1.7203 0.0471 6.3338-4.4723 8.6425zm-12.927 5.661c2.5775-0.85915 8.3778-4.0957 10.575-6.628h-4.1682c-1.6438 2.703-6.4064 6.628-6.4064 6.628" fill="#fff"/><path d="m58.871 25.135-6.1465 6.6562 100.47 13.902c0.1839-0.36534 0.36891-0.72555 0.54297-1.0762-20.54-5.985-61.017-14.252-94.859-19.482zm33.775 27.139-27.281 0.61914c-1.3657 1.8708-2.6331 3.8175-3.8125 5.8281l30.289-5.4102c0.26481-0.34816 0.53496-0.6963 0.80469-1.0371zm-9.638 15.986-29.801 10.707c-0.662 2.4568-1.2241 4.9502-1.6875 7.4609l30.964-16.908c0.16672-0.41929 0.34199-0.84049 0.52344-1.2598zm33.084 13.395-2.2266 4.3105h23.654c0.17653-0.35062 0.34644-0.69678 0.51563-1.0352l-21.94-3.277zm-37.19 6.454-28.81 24.491c0.19369 2.7143 0.49973 5.397 0.9043 8.0254l27.953-31.187c-0.02213-0.44625-0.037-0.8902-0.04687-1.334zm5.0918 19.395-25.145 37.914c1.3192 2.4985 2.7788 4.835 4.3652 6.9805l21.369-43.805c-0.20108-0.36044-0.39859-0.72697-0.58984-1.0898z" transform="matrix(.8 0 0 -.8 228.01 466.34)" fill="#a71930"/></g></g></svg>
+
+                                        <div class="home_team city mt-1 fs-4 fw-bold">Atlanta</div>
+                                        <div class="home_team name fs-4 fw-bold">Falcons</div>
+                                        
+                                            <div class="home_team record py-1 fw-bold fs-5">12 - 5</div>
+                                        
+                                        <div class="home_team score py-0 fw-bold fs-4">36</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date and Time -->
+                            <div class="datetime text-center py-2">
+                                <div>Saturday, January 14, 2017</div>
+                                <div class="py-1">03:35 PM</div>
+                            </div>
+                            <!-- Table for Betting -->
+                            <div class="card_bottom py-1">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="light-table-container">
+                                        <table class="light-table mb-4">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th scope="col">Team</th>
+                                                    <th scope="col">Spread</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">ML</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr class="text-left">
+                                                    <td><img src="../../nfl_logos/seahawks.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>SEA</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-danger-subtle">+6.5  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-success-subtle">o51.0  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-danger-subtle">SEA</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../nfl_logos/falcons.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>ATL</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-success-subtle">-6.5  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-danger-subtle">u51.0  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-success-subtle">ATL </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <a href="week_19/2016wk19seaatl.html"><button class="btn">Stats</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                </div>
+                
+                <!-- Card -->
+                <div class="col">
+                        <div class="game_card default_card">
+                            <!-- Top of card -->
+                            <div class="card_top px-3 text-center" style="background: linear-gradient(to right, #03202F  50%, #002244  50%);">
+                                <div class="row align-items-stretch">
+                                    <div class="col-6 col-divider py-1 away_team_info" style="color: #A71930 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 191.47542 174.89308" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><g transform="matrix(1.25 0 0 -1.25 -284.21 581.77)"><g transform="translate(.76317 .76317)"><path d="m339.21 440.25c32.436-24.684 7.752-28.379-17.579-31.984 0 0-10.689 2.9487-29.211 12.15-42.008 20.864-28.783 30.695 4.233 36.644-52.841 23.02-96.881-17.06-48.297-56.033l-13.332-9.53c10.951-6.7135 33.641-20.796 30.345-42.362l-11.262-8.0487 34.393-15.585 27.139 12.298c0.19702 11.943 21.543 18.147 30.728 42.441 50.56 11.6 37.682 56.074-7.1562 60.011" fill="#fff"/><path d="m300.1 366.51-9.7503 11.09-11.194-1.6691 5.1742 8.524-9.748 11.097 12.949-5.8279 5.1626 8.5263 2.8235-12.122 12.947-5.8186-11.199-1.6737 2.8351-12.126zm15.995 39.474c-63.467 24.512-67.67 44.623-28.055 51.573-49.544 13.462-78.443-22.445-29.422-56.686l-13.153-9.4026c13.967-9.3307 28.769-23.152 23.747-44.901l-6.6277-4.7314 25.456-11.54c23.69 25.947 36.08 51.158 28.055 75.689" fill="#03202f"/><path d="m348.32 436.39c21.782-17.053 6.6578-27.948-19.897-30.908 6.7181-28.319-13.881-54.257-35.691-74.342l19.997 9.0594c1.479 11.51 21.768 17.495 31.381 43.035 45.156 10.075 37.786 42.481 4.2098 53.156" fill="#a71930"/></g></g></svg>
+
+                                        <div class="away_team city mt-1 fs-4 fw-bold">Houston</div>
+                                        <div class="away_team name fs-4 fw-bold">Texans</div>
+                                        
+                                            <div class="away_team record py-1 fw-bold fs-5">10 - 8</div>
+                                        
+                                        <div class="away_team score py-0 fw-bold fs-4">16</div>
+                                    </div>
+                                    <div class="col-6 py-1 home_team_info" style="color: #C60C30 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 193.09062 94.075104" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><g transform="matrix(1.25 0 0 -1.25 -286.64 543.05)"><g><path d="m381 424.68c-19.236-4.543-20.077 6.5978-49.007 8.6405-38.941 2.75-71.664-14.216-97.815-16.39-5.6811-0.47242-4.9443-5.2007-0.86163-6.0032 9.8564-2.3004 20.027-2.0078 29.336-0.75962-0.3127-0.75025-0.62675-1.9058 0.41338-2.7916 3.6868-3.1338 18.508-3.4022 25.014-3.0278 2.2091 0.12614 6.9253 0.57174 6.9253 0.57174-1.3448-0.1275-3.4465-4.2263 0.99718-5.3805 27.462-7.6889 40.383-20.105 55.216-39.659 6.0274 0.77038 11.703 8.0231 9.2834 13.559l1.2025 2.9714 4.4397 2.0561-1.2723 9.9168 6.7682 3.1875s10.541 28.329 11.158 30.392c0.61737 2.0628-0.66032 2.9848-1.7971 2.7164" fill="#fff"/><path d="m307.98 409.77c7.7185 0.82943 14.526 0.56635 21.946-3.9579-15.476 1.679-23.053-2.644-32.699-3.6049 34.077-8.9424 46.554-28.051 55.004-38.641 5.9066 2.5098 6.226 7.642 4.7215 9.4739l1.5206 3.26 0.0698 2.0937 4.072 1.9044-1.2884 10.145 7.6245 3.1231 10.102 27.653c-17.116-3.5512-22.661 7.5171-47.013 9.027-9.9195 0.61602-18.853 0.15969-27.239-0.94083l1.3676-8.4646c5.6046 0.19325 10.88-0.5194 15.887-2.797-5.504 0.3409-10.456-0.11542-15.288-1.012l1.2133-7.2621" fill="#024"/><path d="m92.408 6.6875c-29.967 4.2445-54.536 14.904-86.764 19.254 36.362 5.995 64.919-7.456 88.719-8.862l-1.955-10.392zm2.903 15.382c-15.648 3.124-29.863 9.482-48.856 9.998 22.034 4.153 37.308 0.47 50.473-1.082l-1.617-8.916z" transform="matrix(.8 0 0 -.8 229.31 434.44)" fill="#c60c30"/><path d="m334.26 386.44c9.2109-6.4502 13.942-13.597 18.742-19.852 2.4413 1.0146 3.2076 3.8478 2.4037 4.849l-2.3245 2.8614 2.6439-0.15568 1.2133 2.1084-3.2868 0.1946-3.7028-0.66837 3.7552 2.5715 2.8587-0.16778 0.10602 1.628-2.9204 1.3985 1.0039 1.0978 5.402-0.33688-1.5528 12.031c-2.1353 0.26035-3.931-0.85895-4.7068-3.9471l-9.5759 0.56369c1.3475 3.0546 3.4465 4.429 7.4299 3.9216-2.2346 3.1298-13.124 3.4197-14.662-1.4911l8.4539-6.9279 1.0938-6.3321-3.4734 5.041c-3.1231 2.7043-6.4032 4.5994-8.9009 1.6132" fill="#b0b7bc"/><path d="m362.6 417.46 0.68045-6.0422 6.8018-2.5527-6.3804-1.5984 0.62946-8.1466-5.5174 6.8837-8.2499-1.9434 5.0973 5.9375-4.2035 5.5697 7.042-2.4171 4.1001 4.3095" fill="#fff"/></g></g></svg>
+
+                                        <div class="home_team city mt-1 fs-4 fw-bold">New England</div>
+                                        <div class="home_team name fs-4 fw-bold">Patriots</div>
+                                        
+                                            <div class="home_team record py-1 fw-bold fs-5">15 - 2</div>
+                                        
+                                        <div class="home_team score py-0 fw-bold fs-4">34</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date and Time -->
+                            <div class="datetime text-center py-2">
+                                <div>Saturday, January 14, 2017</div>
+                                <div class="py-1">07:15 PM</div>
+                            </div>
+                            <!-- Table for Betting -->
+                            <div class="card_bottom py-1">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="light-table-container">
+                                        <table class="light-table mb-4">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th scope="col">Team</th>
+                                                    <th scope="col">Spread</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">ML</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr class="text-left">
+                                                    <td><img src="../../nfl_logos/texans.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>HOU</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-danger-subtle">+16.0  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-success-subtle">o44.0  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-danger-subtle">HOU</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../nfl_logos/patriots.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>NWE</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-success-subtle">-16.0  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-danger-subtle">u44.0  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-success-subtle">NWE </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <a href="week_19/2016wk19hounwe.html"><button class="btn">Stats</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                </div>
+                
+                <!-- Card -->
+                <div class="col">
+                        <div class="game_card default_card">
+                            <!-- Top of card -->
+                            <div class="card_top px-3 text-center" style="background: linear-gradient(to right, #203731  50%, #003594  50%);">
+                                <div class="row align-items-stretch">
+                                    <div class="col-6 col-divider py-1 away_team_info" style="color: #FFB612 ;">
+                                        <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg class="team_logo" viewBox="0 0 314 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-70,-36)">
+        <g transform="matrix(1.03959,2.22462e-21,2.22462e-21,1.03958,70.0449,37.4673)">
+                    <ellipse cx="151" cy="98.75" rx="145.25" ry="94.75" style="fill:#203731;stroke-width:5.77px;stroke:#FFB612;"/>
+                    <path d="M215.062,117.151L127.062,117.151L127.062,94.288L279.263,94.288C279.263,95.588 279.636,96.3 279.651,97.6C280.226,148.726 212.349,179.137 153.5,179.137C77.809,179.137 20.3,144.099 20.599,98.9C20.886,55.326 84.292,18.597 152.486,18.8C207.649,18.8 255.088,43.475 273.063,73.775L215.563,73.775C203.792,58.297 181.18,44.313 149.799,44.313C103.212,44.313 72.974,69.367 72.974,96.2C72.974,126 101.4,147.638 147.2,147.638C181.201,147.638 201.746,134.465 215.062,117.151Z" style="fill:white;fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
+                                        <div class="away_team city mt-1 fs-4 fw-bold">Green Bay</div>
+                                        <div class="away_team name fs-4 fw-bold">Packers</div>
+                                        
+                                            <div class="away_team record py-1 fw-bold fs-5">12 - 6</div>
+                                        
+                                        <div class="away_team score py-0 fw-bold fs-4">34</div>
+                                    </div>
+                                    <div class="col-6 py-1 home_team_info" style="color: #869397 ;">
+                                        <?xml version="1.0" standalone="no"?>
+<svg class="team_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 411">
+<path fill="#002244" d="M216,1.28223L348.674,409.61L1.32959,157.25H430.67L83.3264,409.61Z"/>
+<path fill="#FFFFFF" d="M216,38.9871L326.511,379.106L37.1892,168.901H394.811L105.489,379.106Z"/>
+<path fill="#002244" d="M216,68.2722L309.298,355.414L65.0408,177.95H366.959L122.702,355.414Z"/>
+</svg>
+
+                                        <div class="home_team city mt-1 fs-4 fw-bold">Dallas</div>
+                                        <div class="home_team name fs-4 fw-bold">Cowboys</div>
+                                        
+                                            <div class="home_team record py-1 fw-bold fs-5">13 - 4</div>
+                                        
+                                        <div class="home_team score py-0 fw-bold fs-4">31</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date and Time -->
+                            <div class="datetime text-center py-2">
+                                <div>Sunday, January 15, 2017</div>
+                                <div class="py-1">03:40 PM</div>
+                            </div>
+                            <!-- Table for Betting -->
+                            <div class="card_bottom py-1">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="light-table-container">
+                                        <table class="light-table mb-4">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th scope="col">Team</th>
+                                                    <th scope="col">Spread</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">ML</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr class="text-left">
+                                                    <td><img src="../../nfl_logos/packers.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>GNB</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-success-subtle">+5.5  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-success-subtle">o52.5  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-success-subtle">GNB</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../nfl_logos/cowboys.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>DAL</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-danger-subtle">-5.5  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-danger-subtle">u52.5  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-danger-subtle">DAL </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <a href="week_19/2016wk19gnbdal.html"><button class="btn">Stats</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                </div>
+                
+                <!-- Card -->
+                <div class="col">
+                        <div class="game_card default_card">
+                            <!-- Top of card -->
+                            <div class="card_top px-3 text-center" style="background: linear-gradient(to right, #FFB612  50%, #E31837  50%);">
+                                <div class="row align-items-stretch">
+                                    <div class="col-6 col-divider py-1 away_team_info" style="color: #101820 ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 196.06249 196.06036"><g transform="matrix(.5 0 0 .5 1.1041 1.054)"><path d="m2.7825 194.67c0 105.35 85.712 191.06 191.06 191.06s191.06-85.712 191.06-191.06c0.01-105.35-85.7-191.06-191.06-191.06-105.34 0-191.06 85.706-191.06 191.06"/><path d="m193.84 381.54c103.2 0 186.87-83.669 186.87-186.88 0-103.19-83.67-186.86-186.87-186.86-103.2 0.0012-186.87 83.67-186.87 186.87 0 103.21 83.669 186.88 186.88 186.88" fill="#a5acaf"/><path d="m193.84 351.02c86.094 0 155.89-69.794 155.89-155.89 0-86.09-69.79-155.9-155.89-155.9s-155.89 69.8-155.89 155.89c0 86.094 69.794 155.89 155.89 155.89" fill="#fff"/><path d="m194.66 195.34c1.8008-63.85 62.116-78.844 77.269-77.469-37.356-2.0285-74.225-17.814-77.069-76.888-4.5062 54.938-26.55 70.556-77.344 77.075 36.281 1.8375 73.012 16.194 77.144 77.281" fill="#eead1e"/><path d="m272.14 274.37c1.8-63.85 61.056-79.606 76.212-78.231-37.481-1.3875-73.581-19.2-76.425-78.269-4.5 54.938-26.469 70.95-77.269 77.469 36.281 1.8375 73.35 17.944 77.481 79.031" fill="#c60c30"/><path d="m195.6 350.37c1.7965-63.862 61.389-77.375 76.55-76-37.356-2.0328-74.638-19.954-77.481-79.031-4.5062 54.944-25.9 71.444-76.694 77.962 36.281 1.85 73.488 15.994 77.625 77.069" fill="#00539b"/><path d="m68.698 171.71c-1.4753 0.01-2.977 0.32396-4.3818 0.94045-1.689 0.7392-2.8584 2.08-3.6836 3.5498-0.82515 1.487-1.2894 2.6686-1.3926 4.3662-0.21489 3.5843 1.5774 7.362 4.9512 9.468 2.3638 1.4784 4.0955 1.6719 6.1025 3.6016 1.0658 1.0143 0.98055 3.6489 0.6367 4.2549-0.9756 1.7277-3.5116 1.0917-4.1348 0.43847-0.6275-0.65755-0.90195-3.026-0.77735-3.9629l-6.6925 0.0391c-0.25787 2.9482-0.05507 4.7623 0.83885 6.7605 0.9068 2.0371 2.1788 2.802 3.8291 3.5928 3.5844 1.7019 8.4195 1.5594 11.909-1.6982 0.85525-0.79505 1.1641-1.7276 1.1641-1.7276 0.81225-1.9727 1.7196-4.2071 1.0879-7.8085-0.29656-1.6848-1.0275-3.0642-1.4014-3.5928-1.242-1.7535-2.1622-2.5487-5.4845-4.169 0.07738 0-1.0484-0.48144-0.9668-0.48144-3.5156-1.1217-4.912-3.2702-3.8203-5.5565 0.6017-1.2721 2.8791-1.7797 3.8848-0.86425 0.679 0.6231 0.8338 1.9552 0.88965 2.9824l2.3428-0.0166h4.3056c0.09024-2.9654-0.5456-4.6336-1.1817-5.751-1.6636-2.937-4.7796-4.3868-8.0255-4.3652zm56.9 0.6133v32.948h6.3135v-32.93l-6.3135-0.0176zm-38.009 3.7862-6.2665 3.4385v2.1572l-2.4795 0.0781 0.0254 5.3975 2.3379-0.0772 0.04785 12.407c0.0258 6.5885 5.6725 5.5745 8.6555 5.6475l0.005-7.005c-2.527 0.0387-2.2998-0.46438-2.2998-1.7236v-9.206l2.4112 0.0391-0.0254-5.531-2.3858 0.0518-0.0254-5.674zm83.335 5.295c-1.0638 0.0156-2.1315 0.24051-3.124 0.72265-0.95405 0.45987-1.6506 0.36038-3.2451 2.333-0.7564 0.9326-0.9709 2.3166-1.044 3.5156-0.15044 2.5357 0.68755 5.8795 4.1386 6.752 1.9297 0.48562 4.1262 0.7395 5.1535 2.291 0.563 0.8466 0.39907 1.1987 0.14551 1.8476-0.36106 0.91975-2.4106 0.90735-3.2314 0.58495-0.81225-0.30944-1.3194-1.2592-1.2119-2.0801l-5.252 0.0342c0.0988 2.0285 0.11609 3.258 0.88965 4.7578 0.7478 1.4527 2.2558 2.5096 3.6396 2.9306 2.8193 0.85525 5.9225 0.70535 8.2215-0.7129 0.42119-0.26219 1.6036-1.3373 2.085-2.2012 0.7908-1.444 1.259-3.2919 0.5498-5.716-0.33519-1.169-0.36951-1.3016-0.5801-1.71-1.2506-2.3852-2.8582-2.8494-4.5215-3.4082 0.0559 0-1.5471-0.37012-1.4912-0.37012-2.931-0.33094-3.1114-1.9892-2.7246-3.1152 0.32232-0.9326 1.0656-1.2422 2.0283-1.2422 0.8166 0.009 1.62 0.57995 1.7705 1.1816 0.10313 0.42975 0.0908 0.9243 0.0908 1.4873l5.4325 0.0254c-0.043-2.1145-0.43036-4.3066-1.6123-5.497-1.4478-1.4685-3.7672-2.4454-6.1075-2.4112zm-10.052 0.11621c-2.0716 0.46413-2.6217 1.4274-3.5371 3.039l-0.0264-2.9356-6.085 0.0645v23.38h6.201v-13.551c0.0687-1.4097-0.27903-3.2456 4.96-2.876v-7.121h-1.5127zm-61.69 0.21191c-1.2533-0.0252-2.6171 0.25706-4.377 1.0264-2.063 1.358-3.2576 3.223-3.1416 5.3635v11.406c0.11606 2.828 1.3415 4.8348 3.8642 5.759 1.9168 0.40825 3.9704 1.0229 7.254 0 3.0944-1.0659 3.8548-3.0558 3.8076-4.8867l-0.0127-2.7549-5.1525 0.0263v0.666c-0.116 2.6431-4.698 2.2135-4.7109 0.11621l0.0088-3.2148h9.867v-7.2375c-0.0301-2.3767-1.1643-4.0788-3.6914-5.454-1.3194-0.45768-2.4625-0.7902-3.7158-0.81545zm17.106 0c-1.2528-0.0252-2.6158 0.25706-4.378 1.0264-2.063 1.358-3.2576 3.223-3.1416 5.3635v11.406c0.11606 2.828 1.3404 4.8348 3.8633 5.759 1.9211 0.40825 3.9714 1.0229 7.255 0 3.0944-1.0659 3.8506-3.0558 3.8076-4.8867l-0.0127-2.7549-5.1535 0.0263v0.666c-0.116 2.6431-4.6971 2.2135-4.71 0.11621l0.009-3.2148h9.867v-7.2375c-0.0301-2.3767-1.1643-4.0788-3.6914-5.454-1.3194-0.45768-2.462-0.7902-3.7148-0.81545zm25.115 0c-1.2528-0.0252-2.6149 0.25706-4.377 1.0264-2.0672 1.358-3.2576 3.223-3.1416 5.3635v11.406c0.11607 2.828 1.3406 4.8348 3.8633 5.759 1.9211 0.40825 3.9714 1.0229 7.255 0 3.0944-1.0659 3.8543-3.0558 3.8028-4.8867l-0.008-2.7549-5.157 0.0263v0.666c-0.11175 2.6431-4.6936 2.2135-4.7022 0.11621l-0.0215-3.2148h9.8935v-7.2375c-0.0258-2.3767-1.1647-4.0788-3.6875-5.454-1.3237-0.45768-2.4669-0.7902-3.7197-0.81545zm-42.32 5.371c1.4669-0.0725 3.0368 1.0953 2.5254 3.2666l-4.6679-0.0175c-0.36665-2.1556 0.8482-3.185 2.1426-3.249zm17.104 0c1.467-0.0725 3.0368 1.0953 2.5254 3.2666l-4.667-0.0175c-0.36665-2.1556 0.84725-3.185 2.1416-3.249zm25.116 0c1.467-0.0725 3.0368 1.0953 2.5254 3.2666l-4.667-0.0175c-0.36665-2.1556 0.84725-3.185 2.1416-3.249z"/></g></svg>
+
+                                        <div class="away_team city mt-1 fs-4 fw-bold">Pittsburgh</div>
+                                        <div class="away_team name fs-4 fw-bold">Steelers</div>
+                                        
+                                            <div class="away_team record py-1 fw-bold fs-5">13 - 5</div>
+                                        
+                                        <div class="away_team score py-0 fw-bold fs-4">18</div>
+                                    </div>
+                                    <div class="col-6 py-1 home_team_info" style="color: #FFB81C ;">
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="team_logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 158.16756 100.93747"><g transform="matrix(.5 0 0 .5 .50848 .33626)"><path d="m303.99 88.5c-2.68-2.41-4.87-3.74-5.56-4.33-3.96-3.16-0.642-0.642-4.44-3.1-2.73-1.71-3.48-3.1-6.26-4.65-4.98-2.84-5.51-3.64-9.52-8.45-3.48-6.37-8.88-7.28-14.3-8.51-5.24-1.18-8.99-5.35-9.9-6.79-2.78-4.55-7.33-6.74-9.74-8.08-7.44-4.07-16-3.37-22.7-9.36-10.1-7.17-12.8-5.83-23.4-6.15-5.88-0.16-13.5-3.91-16-5.99-2.09-1.77-4.55-2.89-6.69-3.58-7.49-2.3-12.6 1.66-23.1-3.42-3.05-1.5-5.83-3.53-8.83-5.3-1-0.77-2-1.3-5-1.94-6-1.18-11-0.43-17 0.16-4 0.26-5-1.4-8-2.95-3-1.44-6-2.51-9-3.15-4.9-0.86-10.1-0.27-15.4 0.8-10.5 2.09-20-3.21-30.2-2.25-1.7 0.16-5 2.3-6.2 4.71-1.5 3.21-1.5 5.08-1.28 8.29 0.321 4.33 0.802 4.65 1.66 7.44 1.82 6.1 2.78 9.42 4.23 13.5 1.71 4.76 1.66 10.6-2.41 12.5-1.93 0.91-5.19 0.91-7.01-0.482-2.84-2.19-4.39-5.19-7.6-5.83-4.28-0.856-9.42 3.53-14 4.76-4.55 1.18-5.14-1.28-8.29-2.73-2.09-0.963-4.12 0.428-5.3 1.12-2.14 1.18-2.62 3.64-3.16 6.26-0.374 2.09-0.588 4.01-0.0535 6.31 0.749 3.32 1.87 5.3 1.93 7.6 0.214 5.78-0.749 10.1-3.1 13.1-1.5 1.93-3.53 7.33-4.12 9.31-2.09 6.63-1.87 5.51-2.89 11.7-0.535 3.16-0.428 6.69-0.696 9.63-0.0535 0.535 0.374 7.22 0.696 9.26 0.802 4.98 1.71 8.13 2.78 12.3 1.5 6.05 2.14 9.79 1.98 14.4-0.16 4.76-3.16 9.26-0.321 12.6 1.77 2.09 6.42 3.96 10.2 2.3 3.85-1.71 6.63-3.69 9.63-4.12 5.51-0.749 9.1 1.6 11.5 1.34 2.14-0.268 5.83-2.35 7.6-2.51 1.39-0.107 4.44-0.268 5.51 0.535 1.71 1.28 2.73 2.68 2.46 7.01 0 0.0535-1.02 4.65-1.02 4.71-1.77 5.72-3.64 11.1-4.55 15-0.963 4.12-5.46 13.1 3.69 16.7 3.85 1.55 7.92 1.23 13-0.0535 2.57-0.642 3.64-0.749 6.05-1.18 0-0.16 3.58-0.107 3.58-0.268l3.21-0.16c5.67-0.642 7.01-0.268 12 0.428 4.71 0.588 9.2 1.5 13.9 0.963 2.35-0.268 4.65-0.696 6.9-1.44 6.53-2.09 9.58-4.92 17.4-5.99 6.53-0.91 6.53 0.214 12.3-0.0535 5.99-0.268 9.31-2.84 11.8-4.23 3.05-1.66 3.85-1.82 5.88-2.89 7.38-3.96 16.1-3.48 24.4-5.51 5.83-1.44 8.13-4.17 14.7-5.94 2.62-0.696 5.46-0.642 8.24-1.02 2.14-0.321 5.88-2.19 7.97-4.12 3.58-3.32 3.21-3.48 5.99-5.03 4.65-2.62 9.95-2.57 14.7-4.76 4.39-2.03 8.88-3.74 12.3-7.22 5.03-5.08 13-6.53 19.5-8.88 3.85-1.39 8.93-3.91 13.2-11.2 4.17-7.17 7.86-8.24 15.2-10.4 4.92-1.5 7.06-2.51 10.9-6.1 3.42-3.21 4.65-5.3 6.21-7.54 1.77-2.57 5.19-6.85 1.55-10.1-1.6-1.44-3.26-4.07-6.69-6.74"/><path fill="#100f0d" d="m222.51 141.54"/><path fill="#fff" d="m299 94.7c-4.28-3.05-4.65-3.58-6.9-5.08-5.78-3.85-6.9-4.71-9.74-7.97-2.78-3.16-3.53-4.23-6.69-5.94-1.18-0.696-9.15-3.42-7.7-3.16-7.28-1.28-7.54-2.84-10.4-5.51-2.41-3.48-5.24-7.65-7.7-9.26 0.963 0.588-4.44-2.94-4.39-2.84-4.12-1.44-5.56-1.07-10.8-1.28 0.16 0-5.67-0.802-7.17-1.5-2.68-1.18-4.12-2.57-5.94-3.96-4.07-3.05-2.94-2.35-6.96-5.3-5.46-3.96-6.15-3-13.1-3.69-5.88-0.588-10.1-1.98-14.7-5.3-8.19-5.94-16.2-3.85-21.2-4.6-7.22-1.07-12.3-4.01-15-5.72-5.83-3.69-4.49-1.98-10.7-4.87-7.44-3.53-14.4 2.35-23.1-0.107-4.6-1.28-6.31-3.69-9.26-4.76-8.9-2.6-11.9-1.2-19.1-1.1-8.6 0-16.3-2.3-24.5-2.2-2.3 0-4.07 1.93-3.74 4.55 0 0 0.107 3.16 0.107 3.21 0.428 2.62 1.39 5.4 2.19 8.29 1.02 3.53 1.55 4.71 3 10.3 0.535 4.49 0 5.72-0.321 7.65-0.268 1.55-1.28 4.6-2.03 5.72-0.856 1.28-1.98 1.77-3.48 2.68-2.57 1.55-5.24 2.25-8.02 2.19-2.89-0.107-2.14-0.107-6.69-1.77-1.66-0.642-5.08-2.57-8.51-1.12-6.58 2.78-7.33 0.482-10.9 0.749-1.07 0.0535-2.14 0.588-3.16 1.07-1.66 0.696-2.41 1.77-3.48 3.96-0.642 1.34-1.12 3.53-0.856 5.51-0.374 0 0.642 3.1 0.642 3.21 0.802 4.23 1.02 7.54-0.588 11.3-1.55 3.53-1.98 4.76-3.96 7.65-1.93 2.78-5.3 10.8-5.56 18.2 0.268-0.268-0.0535 8.77 1.02 14.1 1.18 5.88 2.89 6.37 3.26 16.1 0.16 3.69-0.214 6.9-0.321 10.2-0.0535 2.14 0.642 5.14 3.32 4.71 3.85-0.588 8.19-2.73 11.2-2.84 1.5-0.0535 4.07 0.428 5.14 0.749 6.1 2.14 4.07 0.535 13.6-1.12 3.16-0.588 7.54 0.107 9.26 1.12 5.62 3.26 5.14 10.4 3.53 17.5-0.268 1.12-1.66 8.56-1.98 9.68-0.963 3.74-0.856 3.96-1.34 7.97-0.214 1.93-0.107 3.42 0.963 5.19 0.91 1.44 1.93 2.46 3.32 2.46 6.21 0.16 9.63 0 16-1.12 8.24-1.5 12.4-1.5 18.1-0.963 5.83 0.535 14.1 0.374 17.5-0.91 3.1-1.12 7.22-3.53 10.5-4.23 10.8-2.3 11.2-1.23 20-2.35 7.01-0.91 10.6-4.44 14.2-6.31 4.92-2.62 9.26-3.53 14.9-3.53 3.32 0 8.08-1.12 10.4-2.19 9.31-4.23 5.83-3.96 18.8-6.37 6.58-1.23 11.3-6.47 15.4-8.72 2.62-1.5 4.92-2.68 7.86-3.58 3.96-1.18 8.4-1.82 12.2-3.1 6.1-2.14 7.97-4.23 11.3-7.22 2.78-2.51 3.69-2.46 6.79-4.39 3.16-1.98 7.76-3.42 9.52-3.96 4.01-1.23 9.9-7.97 15.4-13.5 6.47-6.63 12.5-5.51 19.7-9.36 4.39-2.3 7.22-3.85 5.19-8.02-0.802-1.66-3-3.69-4.76-4.92"/><path d="m153.1 127.7c-13.6-10.6-9.74-20.1-4.01-24.5l1.71 1.87-2.89 3.05 0.214 11h39.2l5.03-4.82v-12h-3l-13.6-14.6c26.1-5.56 38.9 5.83 46.6 18.4h10.2l5.19-5.03v-29h-10.9l-6.53 4.01c-23-11.2-41-10-59-4.1l-2.94-3 16.6-9.9 10-0.0535 4.92-4.65v-9.84h-40l-4.23 4.33v6.74l-37.5 21.5v-16.5l6.05-6.1v-9.95h-39.3l-5.35 6.26v7.86h6.42v42.5h-1.98s-5.24 5.94-4.98 6.05v11h41.4l4.12-3.85v-13.2h-6.1v-3.37l22.8-13.1 1.93 1.98c-5.08 3.58-9.1 6.96-12.1 12.3-4.49 7.44-6.1 17.8-3.48 26.1 1.71 5.56 3.85 8.93 7.6 12.8 3.58 3.69 6.63 5.83 12.5 8.61 4.82 2.41 16.1 5.83 24.9 6.74 8.51 0.642 19.2 0.535 26.2-0.374 7.7-0.802 15.7-3.58 20.5-5.56 3.85-1.87 8.13-3.58 11.4-6.15 8.24-5.94 17-14.9 17.1-26.1h-15.4c-4.82 17.2-51.4 25-70.1 11.7" stroke="#000"/><path d="m188.69 47.182-36.984 0.05273v6.4141h4.3281l-48.902 27.898v-27.846l6.0918-0.05273v-6.4141h-35.861v6.4141h6.0918v51.254h-6.0918v7.375h35.861v-7.375h-5.8242v-8.6582l27.791-15.928 23.037 24.533-5.1328-0.0547v7.4824h37.199v-7.4277h-1.1758l-33.725-36.396 25.066-14.752 8.2305-0.10742v-6.4121zm0.19922 23.074c-11.618-0.07856-19.879 2.7061-23.877 3.9688l9.5684 10.475c20.576-4.9168 42.646 0.21371 52.32 14.803l9.3027-0.10352 0.10547-25.709h-8.5508l-6.0918 4.0098c-12.673-5.5884-23.741-7.3823-32.777-7.4434zm38.012 29.246-0.21094 0.002h0.21289c-0.0005-0.000757-0.001-0.0012-0.002-0.002zm-90.21-10.26c-8.5514 5.8256-11.436 11.277-13.307 16.568-1.443 4.3826-3.4747 13.309 0.64062 21.646 5.0239 8.6583 13.148 13.683 18.6 15.66 8.9255 3.7412 23.354 7.1609 39.709 6.5195 11.705-0.26723 21.914-2.4052 31.748-7.3223 5.7187-3.0464 6.8946-3.7401 12.613-9.0312 4.2757-4.917 7.7484-7.9634 9.1914-15.553h-9.834c-3.955 6.5204-9.4058 11.703-21.912 15.391l0.10742 0.0547c-24.158 7.1618-47.408 3.5815-57.723-9.1387-8.5514-9.8341-4.5433-18.494 0.9082-23.197l-10.75-11.588z" transform="matrix(1.001 0 0 1.001 -.15807 0)" stroke="#e31837" stroke-width=".53446" fill="#e31837"/></g></svg>
+
+                                        <div class="home_team city mt-1 fs-4 fw-bold">Kansas City</div>
+                                        <div class="home_team name fs-4 fw-bold">Chiefs</div>
+                                        
+                                            <div class="home_team record py-1 fw-bold fs-5">12 - 5</div>
+                                        
+                                        <div class="home_team score py-0 fw-bold fs-4">16</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date and Time -->
+                            <div class="datetime text-center py-2">
+                                <div>Sunday, January 15, 2017</div>
+                                <div class="py-1">07:20 PM</div>
+                            </div>
+                            <!-- Table for Betting -->
+                            <div class="card_bottom py-1">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="light-table-container">
+                                        <table class="light-table mb-4">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th scope="col">Team</th>
+                                                    <th scope="col">Spread</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">ML</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr class="text-left">
+                                                    <td><img src="../../nfl_logos/steelers.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>PIT</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-success-subtle">+2.5  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-danger-subtle">o45.5  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-success-subtle">PIT</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../nfl_logos/chiefs.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>KAN</td>
+                                                    
+                                                        
+                                                            <td class="text-center bg-danger-subtle">-2.5  </td>
+                                                        
+                                                    
+                                                    
+                                                        <td class="text-center bg-success-subtle">u45.5  </td>
+                                                    
+                                                    
+                                                        <td class="moneyline text-center bg-danger-subtle">KAN </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    <div class="text-center p-2">
+                                        <a href="week_19/2016wk19pitkan.html"><button class="btn">Stats</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                </div>
+                
+        
+    </div> 
+
+        <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Home JS -->
+    <script src="../../static/js/nfl.js"></script>
+
+</body>
+</html>

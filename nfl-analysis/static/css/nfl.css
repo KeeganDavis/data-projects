@@ -1,0 +1,272 @@
+body {
+  background:	#d0d7de;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 14px / 1.25 "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #003366;
+}
+
+#wrap {    
+  background-color: #DDE6F1;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+}
+
+#header {
+  background-color: #003366;
+  color: white;
+  border-bottom: 3px solid #E6B400;
+  min-height: 10px;
+}
+
+.nav_menu_link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_menu_link:hover {
+  color: #E6B400
+}
+
+.btn-check:checked + .btn {
+  background-color: #003366 !important; 
+  color: white !important;
+  border-color: #E6B400 !important; 
+}
+
+.btn {
+  background-color: #DDE6F1; 
+  color: #003366; 
+  border: 1px solid #003366;
+}
+
+.btn:hover {
+  background-color: #E6B400 !important;
+  color: #003366 !important;
+}
+
+input[type="radio"] {
+  transform: scale(0.8) !important;
+}
+
+.team_logo {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, .5));
+}
+
+.card_link {
+  color: #000;
+}
+
+small/*, td.moneyline */ {
+  color: #0a9ef5;
+}
+
+td {
+  white-space: pre;
+}
+
+.stats_button {
+  background-color: red;
+}
+
+.row-cols-lg-2 {
+  display: flex;
+  align-items: stretch;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.default_card {
+  border: 1px solid black;
+  border-radius: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_top {
+  position: relative;
+  border-bottom: 2px solid #000;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.col-divider {
+  border-right: 2px solid #000;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.light-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa !important;
+  color: #003366 !important;
+  border: 1px solid #003366 !important;
+}
+
+.light-table thead {
+  background-color: #003366 !important; 
+  color: white !important; 
+  font-weight: bold !important;
+}
+
+/* Padding & Borders */
+.light-table th, .light-table td {
+  padding: 0.75rem !important; 
+  border: 1px solid #003366 !important; 
+  text-align: center !important;
+}
+
+.light-table tbody tr:nth-of-type(odd) {
+  background-color: #e8eff7 !important;
+}
+
+.light-table tbody tr:nth-of-type(even) {
+  background-color: #ffffff !important;
+}
+
+
+.main-table tbody tr:hover {
+  background-color: #cce5ff !important; 
+  color: #003366 !important;
+}
+
+.light-table img {
+  max-height: 20px;
+  vertical-align: middle;
+}
+
+.light-table td,
+.light-table th {
+  padding: 0.75rem !important;
+  border: 1px solid #003366 !important;
+  text-align: center !important;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+.light-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.light-table td {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+.light-table th {
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+svg.team_logo {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+svg.team_logo:hover {
+  transform: translate(-2px, -2px); 
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.4)); 
+}
+
+.accordion-button {
+  background-color: #DDE6F1; 
+  color: #003366; 
+  font-weight: bold;
+}
+
+.accordion-button:hover {
+  background-color: #E6B400; 
+}
+
+.accordion-item {
+  border: 1.5px solid #003366; 
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.accordion-item:first-of-type {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.accordion-item:last-of-type {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.accordion-body {
+  background-color: #DDE6F1;
+  padding: 15px;
+}
+
+.week-menu {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.week-list {
+  column-count: 3; 
+  column-gap: 20px; 
+}
+
+.week-list a {
+  display: block;
+  text-decoration: none;
+  color: #003366;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.week-list a:hover {
+  color: #E6B400;
+}
+
+#statGraph {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 350px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.btn-group {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-group .btn {
+  flex: 1 1 auto;
+  min-width: 80px;
+}
+
+.fantasy_points_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+

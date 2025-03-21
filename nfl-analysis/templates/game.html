@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stats and analysis of previous games for the matchup of {{game.awayTeam}} vs. {{game.homeTeam}} in Week {{game.weekNumber}} of the {{game.year}} season." />
+    <meta name="keywords" content="data analysis, nfl analysis, nfl stats" />
+    <meta name="author" content="Keegan Davis" />
+ 
+    <!-- Title -->
+    <title>{{game.awayTeam}} vs. {{game.homeTeam}} ({{game.gameDate | format_date}})</title>
+
+    <!-- Favicon (Multiple Sizes) -->
+    <!-- Standard .ico favicon -->
+    <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <!-- For different devices (optional) -->
+    <!-- <link rel="icon" sizes="16x16" href="path/to/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="path/to/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png" /> -->
+
+    <!-- CSS Reset / Normalize (ensures consistent styling across browsers) -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-oHDEc8XedRZRfDU24gxYbdZdjfglA+7Lb+OkoR//4F7efaUD6K5IZyB5Aw4SD7oZURRshfZUnPrNZ5pB1ZHRvA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    />
+
+    <!-- home stylesheet -->
+    <link rel="stylesheet" href="../../../static/css/nfl.css" />
+
+    <!-- Plotly import-->
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js" charset="utf-8"></script>
+
+    <style>
+        td.away_team span{ 
+            font-weight: bold;
+        }
+
+        td.home_team span{ 
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="sticky-top">
+        <div class="container d-flex align-items-center py-3">
+        <!-- Logo -->
+        {# <img src="../nfl_logos/cardinals.png" alt="Logo" class="me-3" style="height: 50px;" /> #}
+        <h1 class="m-0">NFL Stats and Analysis</h1>
+        <!-- nav -->
+        <nav class="ms-auto">
+            <ul class="nav_menu list-unstyled m-0">
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="../../homepage.html">Seasons Directory</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Players (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Teams (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block">
+                <a class="nav_menu_link" href="../../../index.html">About</a>
+            </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+
+    <div id="wrap" class="container pt-4">
+        {% if (game.awayTeam == "Commanders" or game.homeTeam == "Commanders") and game.year < 2022 %}
+            <p class="mt-0">* Some teams have undergone name and/or location changes over the years, such as the Raiders, Rams, Chargers, and Commanders.
+                Data reflects their performance regardless of rebranding or relocation.
+            </p>
+        {% elif (game.awayTeam == "Raiders" or game.homeTeam == "Raiders") and game.year < 2020 %}
+            <p class="mt-0">* Some teams have undergone name and/or location changes over the years, such as the Raiders, Rams, Chargers, and Commanders.
+                Data reflects their performance regardless of rebranding or relocation.
+            </p>
+        {% elif (game.awayTeam == "Chargers" or game.homeTeam == "Chargers") and game.year < 2017 %}
+            <p class="mt-0">* Some teams have undergone name and/or location changes over the years, such as the Raiders, Rams, Chargers, and Commanders.
+                Data reflects their performance regardless of rebranding or relocation.
+            </p>
+        {% elif (game.awayTeam == "Rams" or game.homeTeam == "Rams") and game.year < 2016 %}
+            <p class="mt-0">* Some teams have undergone name and/or location changes over the years, such as the Raiders, Rams, Chargers, and Commanders.
+                Data reflects their performance regardless of rebranding or relocation.
+            </p>
+        {% endif %}
+        <!-- Section 1: Subheading -->
+        <section class="mb-4">
+            <h2 class="headline fs-4 text-center">{{game.awayTeam}} @ {{game.homeTeam}}</h2>
+            {% if game.week == 'wild_card'%}
+                <h4 class="week_and_year text-center">{{game.year}} Wild Card Round:</h4>
+            {% elif game.week == 'divisional'%}
+                <h4 class="week_and_year text-center">{{game.year}} Divisional Round:</h4>
+            {% elif game.week == 'conf_champ'%}
+                <h4 class="week_and_year text-center">{{game.year}} Conference Championship:</h4>
+            {% elif game.week == 'super_bowl'%}
+                <h4 class="week_and_year text-center">{{game.year}} Super Bowl:</h4>
+            {% else %}
+                <h4 class="week_and_year text-center">{{game.year}} Week {{game.week}}:</h4>
+            {% endif %}
+        </section>
+
+        <!-- Section 2: Game Card -->
+        <section>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 g-3">
+                <!-- Empty col -->
+                <div class="col"></div>
+                <!-- Game Card -->
+                <div class="col">
+                        <div class="game_card default_card">
+                            <!-- Top of card -->
+                            <div class="card_top px-3 text-center" style="background: linear-gradient(to right, {{game.awayPrimaryCol}} 50%, {{game.homePrimaryCol}} 50%);">
+                                <div class="row align-items-stretch">
+                                    <div class="col-6 col-divider py-1 away_team_info" style="color: {{game.awaySecondaryCol}};">
+                                        {{ game.awayTeam | load_svg | safe }}
+                                        <div class="away_team city mt-1 fs-4 fw-bold">{{game.awayCity}}</div>
+                                        <div class="away_team name fs-4 fw-bold">{{game.awayTeam}}</div>
+                                        {% if game.awayTies == 0%}
+                                            <div class="away_team record py-1 fw-bold fs-5">{{game.awayWinsNew}} - {{game.awayLossesNew}}</div>
+                                        {% else %}
+                                            <div class="away_team record py-1 fw-bold fs-5">{{game.awayWinsNew}} - {{game.awayLossesNew}} - {{game.awayTiesNew}}</div>
+                                        {% endif %}
+                                        <div class="away_team score py-0 fw-bold fs-4">{{game.awayFinalScore}}</div>
+                                    </div>
+                                    <div class="col-6 py-1 home_team_info" style="color: {{game.homeSecondaryCol}};">
+                                        {{ game.homeTeam | load_svg | safe }}
+                                        <div class="home_team city mt-1 fs-4 fw-bold">{{game.homeCity}}</div>
+                                        <div class="home_team name fs-4 fw-bold">{{game.homeTeam}}</div>
+                                        {% if game.homeTies == 0%}
+                                            <div class="home_team record py-1 fw-bold fs-5">{{game.homeWinsNew}} - {{game.homeLossesNew}}</div>
+                                        {% else %}
+                                            <div class="home_team record py-1 fw-bold fs-5">{{game.homeWinsNew}} - {{game.homeLossesNew}} - {{game.homeTiesNew}}</div>
+                                        {% endif %}
+                                        <div class="home_team score py-0 fw-bold fs-4">{{game.homeFinalScore}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date and Time -->
+                            <div class="datetime text-center py-2">
+                                <div>{{game.gameDate | format_date}}</div>
+                                <div class="py-1">{{game.gameTime | format_time}}</div>
+                            </div>
+                            <!-- Table for Betting -->
+                            <div class="card_bottom py-1">
+                                <div class="row row-cols-1">
+                                    <div class="col">
+                                        <div class="light-table-container">
+                                        <table class="light-table mb-4">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th scope="col">Team</th>
+                                                    <th scope="col">Spread</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">ML</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr class="text-left">
+                                                    <td><img src="../../../nfl_logos/{{game.awayTeam | lower}}.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>{{game.awayAbbr}}</td>
+                                                    {% if game.awaySpread > 0 %}
+                                                        {% if game.awayCoveredSpread == 1 %}
+                                                            <td class="text-center bg-success-subtle">{{"+" ~ game.awaySpread }} {# <small>-105</small> #} </td>
+                                                        {% elif game.awayCoveredSpread == -1 %}
+                                                            <td class="text-center bg-warning-subtle">{{"+" ~ game.awaySpread }} {# <small>-105</small> #} </td>
+                                                        {% else %}
+                                                            <td class="text-center bg-danger-subtle">{{"+" ~ game.awaySpread }} {# <small>-105</small> #} </td>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if game.awayCoveredSpread == 1 %}
+                                                            <td class="text-center bg-success-subtle">{{ game.awaySpread }} {# <small>-105</small> #} </td>
+                                                        {% elif game.awayCoveredSpread == -1 %}
+                                                            <td class="text-center bg-warning-subtle">{{ game.awaySpread }} {# <small>-105</small> #} </td>
+                                                        {% else %}
+                                                            <td class="text-center bg-danger-subtle">{{ game.awaySpread }} {# <small>-105</small> #} </td>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                    {% if game.overUnderResult == 'over' %}
+                                                        <td class="text-center bg-success-subtle">{{"o" ~ game.overUnder }} {# <small>-105</small> #} </td>
+                                                    {% elif game.overUnderResult == 'push' %}
+                                                        <td class="text-center bg-warning-subtle">{{"o" ~ game.overUnder }} {# <small>-105</small> #} </td>
+                                                    {% else %}
+                                                        <td class="text-center bg-danger-subtle">{{"o" ~ game.overUnder }} {# <small>-105</small> #} </td>
+                                                    {% endif %}
+                                                    {% if game.winner == game.awayTeam %}
+                                                        <td class="moneyline text-center bg-success-subtle">{{game.awayAbbr}}{# +260 #}</td>
+                                                    {% elif game.winner == 'tie' %}
+                                                        <td class="moneyline text-center bg-warning-subtle">{{game.awayAbbr}}{# +260 #}</td>
+                                                    {% else %}
+                                                        <td class="moneyline text-center bg-danger-subtle">{{game.awayAbbr}}{# +260 #}</td>
+                                                    {% endif %}
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../../nfl_logos/{{game.homeTeam | lower}}.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>{{game.homeAbbr}}</td>
+                                                    {% if game.homeSpread > 0 %}
+                                                        {% if game.homeCoveredSpread == 1 %}
+                                                            <td class="text-center bg-success-subtle">{{"+" ~ game.homeSpread }} {# <small>-105</small> #} </td>
+                                                        {% elif game.homeCoveredSpread == -1 %}
+                                                            <td class="text-center bg-warning-subtle">{{"+" ~ game.homeSpread }} {# <small>-105</small> #} </td>
+                                                        {% else%}
+                                                            <td class="text-center bg-danger-subtle">{{"+" ~ game.homeSpread }} {# <small>-105</small> #} </td>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if game.homeCoveredSpread == 1 %}
+                                                            <td class="text-center bg-success-subtle">{{ game.homeSpread }} {# <small>-105</small> #} </td>
+                                                        {% elif game.homeCoveredSpread == -1 %}
+                                                            <td class="text-center bg-warning-subtle">{{ game.homeSpread }} {# <small>-105</small> #} </td>
+                                                        {% else%}
+                                                            <td class="text-center bg-danger-subtle">{{ game.homeSpread }} {# <small>-105</small> #} </td>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                    {% if game.overUnderResult == 'under' %}
+                                                        <td class="text-center bg-success-subtle">{{"u" ~ game.overUnder }} {# <small>-105</small> #} </td>
+                                                    {% elif game.overUnderResult == 'push' %}
+                                                        <td class="text-center bg-warning-subtle">{{"u" ~ game.overUnder }} {# <small>-105</small> #} </td>
+                                                    {% else %}
+                                                        <td class="text-center bg-danger-subtle">{{"u" ~ game.overUnder }} {# <small>-105</small> #} </td>
+                                                    {% endif %}
+                                                    {% if game.winner == game.homeTeam %}
+                                                        <td class="moneyline text-center bg-success-subtle">{{ game.homeAbbr }} {# -320 #}</td>
+                                                    {% elif game.winner == 'tie' %}
+                                                        <td class="moneyline text-center bg-warning-subtle">{{ game.homeAbbr }} {# -320 #}</td>
+                                                    {% else %}
+                                                        <td class="moneyline text-center bg-danger-subtle">{{ game.homeAbbr }} {# -320 #}</td>
+                                                    {% endif %}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- Empty col -->
+                <div class="col"></div>
+            </div>
+        </section>
+        <!-- Section 3: Team Stats and Fantasy Points Cards-->
+        <section>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 mt-5 d-flex justify-content-center">
+                <!-- Team Stats Card -->
+                <div class="col">
+                    <div class="team_stats_card default_card">
+                        <!-- divide card into 1 responsive column -->
+                        <div class="row row-cols-sm-1">
+                            <div class="pb-2"><h2 class="text-center">Season Stats</h2></div>
+                            <!-- Radio Button for PPR or non-PPR -->
+                            <div class="text-center">
+                                <div class="btn-group mb-4 ms-3 col-6 mx-auto" role="group" aria-label="Basic radio toggle button group" style="max-width: fit-content;">
+                                    <input type="radio" class="btn-check" name="btngroup1" id="btnSeason" autocomplete="off" checked>
+                                    <label class="btn btn-primary" for="btnSeason">Season</label>
+
+                                    <input type="radio" class="btn-check" name="btngroup1" id="btnLast5" autocomplete="off">
+                                    <label class="btn btn-secondary" for="btnLast5">Last 5 Games</label>
+
+                                   {# <input type="radio" class="btn-check" name="btngroup1" id="btnL5Matchups" autocomplete="off"> #}
+                                   {# <label class="btn btn-outline-primary" for="btnL5Matchups">Last 5 Matchups</label> #}
+                                </div>
+                            </div>
+                            <!-- Responsive Table for Team Stats -->
+                            {% if game.weekNumber == 1 %}
+                                <p class="mx-1">
+                                    * All stats shown are from the previous season.
+                                </p>
+                            {% else %}
+                                <p class="mx-1">
+                                    * All stats shown are from the current season, up to but not including this game.
+                                </p>
+                            {% endif %}
+                            <div class="col">
+                                <div class="light-table-container">
+                                    <table class="light-table main-table mb-3" id="statsTable">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="text-center"><img src="../../../nfl_logos/{{game.awayTeam | lower}}.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>{{game.awayAbbr}}</th>
+                                                <th class="text-center"><img src="../../../nfl_logos/{{game.homeTeam | lower}}.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>{{game.homeAbbr}}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <tr>
+                                                <td class="fw-bold">Records</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>W/L Record</td>
+                                                {% if game.awayTiesOnRoad == 0 %}
+                                                    <td class="away_team" id="awayRecord">{{game.awayWins}}-{{game.awayLosses}} ({{ game.awayWinsOnRoad }}-{{ game.awayLossesOnRoad }} Away)</td>
+                                                {% else %}
+                                                    <td class="away_team" id="awayRecord">{{game.awayWins}}-{{game.awayLosses}}-{{game.awayTies}} ({{ game.awayWinsOnRoad }}-{{ game.awayLossesOnRoad }}-{{ game.awayTiesOnRoad }} Away)</td>
+                                                {% endif %}
+                                                {% if game.homeTiesAtHome == 0 %}
+                                                    <td class="home_team" id="homeRecord">{{game.homeWins}}-{{game.homeLosses}} ({{ game.homeWinsAtHome }}-{{ game.homeLossesAtHome }} Home)</td>
+                                                {% else %}
+                                                    <td class="home_team" id="homeRecord">{{game.homeWins}}-{{game.homeLosses}}-{{game.homeTies}} ({{ game.homeWinsAtHome }}-{{ game.homeLossesAtHome }}-{{ game.homeTiesAtHome }} Home)</td>
+                                                {% endif %}
+                                            </tr>
+                                            <tr>
+                                                <td>Against The Spread</td>
+                                                {% if game.awayATSPush == 0%}
+                                                    <td class="away_team" id="awayATS">{{ game.awayATSWin }}-{{ game.awayATSLoss }} ({{ game.awayATSWinOnRoad }}-{{ game.awayATSLossOnRoad }} Away)</td>
+                                                {% else %}
+                                                    <td class="away_team" id="awayATS">{{ game.awayATSWin }}-{{ game.awayATSLoss }}-{{ game.awayATSPush }} ({{ game.awayATSWinOnRoad }}-{{ game.awayATSLossOnRoad }}-{{ game.awayATSPushOnRoad}} Away)</td>
+                                                {% endif %}
+                                                {% if game.homeATSPush == 0%}
+                                                    <td class="home_team" id="homeATS">{{ game.homeATSWin }}-{{ game.homeATSLoss }} ({{ game.homeATSWinAtHome }}-{{ game.homeATSLossAtHome }} Home)</td>
+                                                {% else %}
+                                                    <td class="home_team" id="homeATS">{{ game.homeATSWin }}-{{ game.homeATSLoss }}-{{ game.homeATSPush }} ({{ game.homeATSWinAtHome }}-{{ game.homeATSLossAtHome }}-{{ game.homeATSPushAtHome}} Home)</td>
+                                                {% endif %}
+                                            </tr>
+                                            <tr>
+                                                <td>Over/Under</td>
+                                                {% if game.awayPush == 0%}
+                                                    <td class="away_team" id="awayOU">{{ game.awayOver }}-{{ game.awayUnder }} ({{ game.awayOverOnRoad }}-{{ game.awayUnderOnRoad }} Away)</td>
+                                                {% else %}
+                                                    <td class="away_team" id="awayOU">{{ game.awayOver }}-{{ game.awayUnder }}-{{ game.awayPush }} ({{ game.awayOverOnRoad }}-{{ game.awayUnderOnRoad }} - {{ game.awayPushOnRoad}} Away)</td>
+                                                {% endif %}
+                                                {% if game.homePush == 0%}
+                                                    <td class="home_team" id="homeOU">{{ game.homeOver }}-{{ game.homeUnder }} ({{ game.homeOverAtHome }}-{{ game.homeUnderAtHome }} Home)</td>
+                                                {% else %}
+                                                    <td class="home_team" id="homeOU">{{ game.homeOver }}-{{ game.homeUnder }}-{{ game.homePush }} ({{ game.homeOverAtHome }}-{{ game.homeUnderAtHome }}-{{ game.homePushAtHome}} Home)</td>
+                                                {% endif %}
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Offense</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Pass Yds</td>
+                                                <td class="away_team" id="awayAvgPassYdsFor">{{ game.awayAvgPassYdsFor }} {{ game.awayAvgPassYdsForRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgPassYdsFor">{{ game.homeAvgPassYdsFor }} {{ game.homeAvgPassYdsForRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Rush Yds</td>
+                                                <td class="away_team" id="awayAvgRushYdsFor">{{ game.awayAvgRushYdsFor }} {{ game.awayAvgRushYdsForRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgRushYdsFor">{{ game.homeAvgRushYdsFor }} {{ game.homeAvgRushYdsForRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Total Yds</td>
+                                                <td class="away_team" id="awayAvgTotalYdsFor">{{ game.awayAvgTotalYdsFor }} {{ game.awayAvgTotalYdsForRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgTotalYdsFor">{{ game.homeAvgTotalYdsFor }} {{ game.homeAvgTotalYdsForRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Points</td>
+                                                <td class="away_team" id="awayAvgFinalScoreFor">{{ game.awayAvgFinalScoreFor }} {{ game.awayAvgFinalScoreForRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgFinalScoreFor">{{ game.homeAvgFinalScoreFor }} {{ game.homeAvgFinalScoreForRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Defense</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Pass Yds Allowed</td>
+                                                <td class="away_team" id="awayAvgPassYdsAgainst">{{ game.awayAvgPassYdsAgainst }} {{ game.awayAvgPassYdsAgainstRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgPassYdsAgainst">{{ game.homeAvgPassYdsAgainst }} {{ game.homeAvgPassYdsAgainstRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Rush Yds Allowed</td>
+                                                <td class="away_team" id="awayAvgRushYdsAgainst">{{ game.awayAvgRushYdsAgainst }} {{ game.awayAvgRushYdsAgainstRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgRushYdsAgainst">{{ game.homeAvgRushYdsAgainst }} {{ game.homeAvgRushYdsAgainstRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Total Yds Allowed</td>
+                                                <td class="away_team" id="awayAvgTotalYdsAgainst">{{ game.awayAvgTotalYdsAgainst }} {{ game.awayAvgTotalYdsAgainstRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgTotalYdsAgainst">{{ game.homeAvgTotalYdsAgainst }} {{ game.homeAvgTotalYdsAgainstRank | format_rank | safe }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avg. Points Allowed</td>
+                                                <td class="away_team" id="awayAvgFinalScoreAgainst">{{ game.awayAvgFinalScoreAgainst }} {{ game.awayAvgFinalScoreAgainstRank | format_rank | safe }}</td>
+                                                <td class="home_team" id="homeAvgFinalScoreAgainst">{{ game.homeAvgFinalScoreAgainst }} {{ game.homeAvgFinalScoreAgainstRank | format_rank | safe }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fantasy Points Card -->
+                <div class="col">
+                    <div class="fantasy_points_card default_card">
+                        <!-- divide card into 1 responsive column -->
+                        <div class="row row-cols-sm-1">
+                            <!-- Heading for Card -->
+                            <div class="text-center py-2"><h2>Fantasy Points by Position (In Progress)</h2></div>
+                            <!-- Radio Button for PPR or non-PPR -->
+                            <div class="text-center">
+                                <div class="btn-group mb-4 ms-3 col-6 mx-auto" role="group" aria-label="Basic radio toggle button group" style="max-width: fit-content;">
+                                    <input type="radio" class="btn-check" name="btngroup2" id="btnPPR" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="btnPPR">PPR</label>
+
+                                    <input type="radio" class="btn-check" name="btngroup2" id="btnNonPPR" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnNonPPR">Non-PPR</label>
+
+                                    <input type="radio" class="btn-check" name="btngroup2" id="btnDK" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnDK">DK</label>
+
+                                    <input type="radio" class="btn-check" name="btngroup2" id="btnFD" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnFD">FD</label>
+                                </div>
+                            </div>
+                            <!-- Responsive Table for Fantasy Points -->
+                            <div class="col">
+                                <div class="light-table-container">
+                                    <table class="light-table main-table mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="text-center"><img src="../../../nfl_logos/{{game.awayTeam | lower}}.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>{{game.awayAbbr}}</th>
+                                                <th class="text-center"><img src="../../../nfl_logos/{{game.homeTeam | lower}}.svg" alt="logo" style="height: 20px; width: 20px;"><span> </span>{{game.homeAbbr}}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <tr>
+                                                <td class="fw-bold">Points For</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quarterback</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Running Back</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wide Receiver</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tight End</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>D/ST</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kicker</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Points Against</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quarterback</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Running Back</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wide Receiver</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tight End</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>D/ST</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kicker</td>
+                                                <td class="away_team"></td>
+                                                <td class="home_team"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: Graphs -->
+        <section>
+            <div class="row row-cols-sm-1 mx-auto mt-5">
+                <div class="col default_card">
+                    <div class="text-center pb-2"><h2>Game Stats (In Progress)</h2></div>
+                    <div class="row row-cols-3 mt-2">
+                        <div class="col-12 py-1">
+                            <label for="statSelector">Stat:</label>
+                            <input type="radio" class="btn-check" name="statOptions" id="FinalScore" autocomplete="off" checked><label class="btn" for="FinalScore">Scoring</label>
+                            <input type="radio" class="btn-check" name="statOptions" id="PassYds" autocomplete="off"><label class="btn" for="PassYds">Passing Yards</label>
+                            <input type="radio" class="btn-check" name="statOptions" id="RushYds" autocomplete="off"><label class="btn" for="RushYds">Rushing Yards</label> 
+                            <input type="radio" class="btn-check" name="statOptions" id="TotalYds" autocomplete="off"><label class="btn" for="TotalYds">Total Yards</label> 
+                        </div>
+                        <div class="col-12 py-1">
+                            <label for="teamSelector">Team:</label>
+                            <input type="radio" class="btn-check" name="teamOptions" id="home" autocomplete="off" checked><label class="btn" for="home">{{ game.homeTeam }}</label>
+                            <input type="radio" class="btn-check" name="teamOptions" id="away" autocomplete="off"><label class="btn" for="away">{{ game.awayTeam }}</label>                            
+                        </div>
+                        <div class="col-12 py-1">
+                            <label for="sideSelector">Side:</label>
+                            <input type="radio" class="btn-check" name="sideOptions" id="offense" autocomplete="off" checked><label class="btn" for="offense">Offense</label>
+                            <input type="radio" class="btn-check" name="sideOptions" id="defense" autocomplete="off"><label class="btn" for="defense">Defense</label>
+                        </div>
+                        <div class="col-12 py-1 game-filter">
+                            <label for="startYear">Start Year:</label>
+                            <select id="startYear"></select>
+
+                            <label for="startWeek">Start Week:</label>
+                            <select id="startWeek"></select>
+
+                            <label for="endYear">End Year:</label>
+                            <select id="endYear"></select>
+
+                            <label for="endWeek">End Week:</label>
+                            <select id="endWeek"></select>
+                        </div>
+                        <div class="col-12 py-1">
+                            <button class="btn" id="gameFilter">Apply Filter</button>
+                        </div>
+                    </div>
+                    {% if game.weekNumber == 1 %}
+                        <p>
+                            * All stats shown are from the previous season.
+                        </p>
+                    {% else %}
+                        <p>
+                            * All stats shown are from the current season, up to but not including this game.
+                        </p>
+                    {% endif %}
+                    <div class="row row-cols-sm-1 my-2">
+                        <div class="col-12 pb-1">
+                            <div id="statGraph"></div>
+                        </div>
+                    </div>
+                    <!-- Button to expand chart -->
+                    <div class="card-footer text-center">
+                        <button id="expandChartBtn" class="btn btn-primary w-auto mb-3">Expand Chart (Mobile)</button>
+                    </div>
+
+                    <div class="modal fade" id="chartModal" tabindex="-1" aria-labelledby="chartModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <h5 class="modal-title" id="chartModalLabel">Full-Screen Chart</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="fullScreenChart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+        <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- store game data from python to json for JS -->
+    <script>
+        const gameData = {{ game_json | safe }};
+        const homeData = {{ home_json | safe }};
+        const awayData = {{ away_json | safe }};
+    </script>
+
+    <!-- JS -->
+    <script src="../../../static/js/nfl.js" defer></script>
+
+</body>
+</html>

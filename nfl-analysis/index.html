@@ -1,0 +1,157 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About the website and creator" />
+    <meta name="keywords" content="data analysis, nfl analysis, nfl stats" />
+    <meta name="author" content="Keegan Davis" />
+ 
+    <!-- Title -->
+    <title>About the Project</title>
+
+    <!-- Favicon (Multiple Sizes) -->
+    <!-- Standard .ico favicon -->
+    <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <!-- For different devices (optional) -->
+    <!-- <link rel="icon" sizes="16x16" href="path/to/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="path/to/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png" /> -->
+
+    <!-- CSS Reset / Normalize (ensures consistent styling across browsers) -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-oHDEc8XedRZRfDU24gxYbdZdjfglA+7Lb+OkoR//4F7efaUD6K5IZyB5Aw4SD7oZURRshfZUnPrNZ5pB1ZHRvA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    />
+
+    <!-- home stylesheet -->
+    <link rel="stylesheet" href="./static/css/nfl.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="sticky-top">
+        <div class="container d-flex align-items-center py-3">
+        <!-- Logo -->
+        <!-- <img src="../nfl_logos/cardinals.png" alt="Logo" class="me-3" style="height: 50px;" /> -->
+        <h1 class="m-0">NFL Stats and Analysis</h1>
+        <!-- nav -->
+        <nav class="ms-auto">
+            <ul class="nav_menu list-unstyled m-0">
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="./output/homepage.html">Seasons Directory</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Players (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block me-3">
+                <a class="nav_menu_link" href="#">Teams (Coming Soon)</a>
+            </li>
+            <li class="nav_item d-inline-block">
+                <a class="nav_menu_link" href="./index.html">About</a>
+            </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div id="wrap" class="container py-4">
+        <h2 class="text-center">About This Project</h2>
+        <p>
+            This website is a comprehensive NFL data analytics platform designed to track and visualize team statistics over multiple seasons. 
+            It integrates web scraping, database management, data analysis, and front-end interactivity to deliver a seamless experience for exploring NFL statistics.
+        </p>
+
+        <h3 class="mt-2">Tech Stack & Development Process</h3>
+        <p>
+            I leveraged a variety of technologies to collect, process, store, and visualize the data:
+        </p>
+        <ul>
+            <li><strong>Data Collection:</strong> Used Playwright to scrape team stats and information from multiple sources.</li>
+            <li><strong>Data Processing:</strong> Utilized Pandas for cleaning and combining the datasets.</li>
+            <li><strong>Database Management:</strong> Stored data in PostgreSQL to efficiently manage 4,613 games spanning from 2008 to 2024 with 234 columns.</li>
+            <li><strong>Backend Development:</strong> Used Python and Jinja2 templates to dynamically generate HTML pages.</li>
+            <li><strong>Front-End Development:</strong> Styled the website with CSS and Bootstrap to ensure a responsive and user-friendly interface.</li>
+            <li><strong>Dynamic Data Updates:</strong> Implemented JavaScript to allow real-time updates for tables and charts based on user selections.</li>
+            <li><strong>Data Visualization:</strong> Integrated Plotly.js to generate interactive charts for trend analysis.</li>
+            <li><strong>Statistical Computations:</strong> Used Pandas to calculate averages and other key metrics.</li>
+        </ul>
+
+        <h3 class="mt-2">Dataset Overview</h3>
+        <ul>
+            <li>Data Range: 2008 - 2024</li>
+            <li>Number of Games: 4,613</li>
+            <li>Columns: 234</li>
+            <li>Key Stats: Passing yards, rushing yards, scoring trends, opponent trends, and advanced analytics.</li>
+        </ul>
+
+        <h2 class="text-center mt-2">About Me</h2>
+        <p>
+            I am an experienced business analyst with a strong background in Python, SQL, and data visualization. 
+            I specialize in exploratory data analysis, statistical modeling, and unstructured data analysis. 
+            My passion lies in leveraging data to drive decision-making, optimize processes, and create insightful dashboards. 
+            I hold a Bachelor of Science in Biology from Texas A&M University and a Data Analytics Certification from the University of Texas at Austin Data Analytics Bootcamp.
+        </p>
+
+        <h3 class="mt-2">Skills</h3>
+        <ul>
+            <li><strong>Programming:</strong> Python, SQL, JavaScript, HTML/CSS</li>
+            <li><strong>Data Science:</strong> Pandas, NumPy, scikit-learn, TensorFlow</li>
+            <li><strong>Data Visualization:</strong> Tableau, Plotly, Matplotlib, JavaScript Charting</li>
+            <li><strong>Databases:</strong> PostgreSQL, SQL Server, MongoDB</li>
+            <li><strong>Big Data & ETL:</strong> Hadoop, PySpark, Databricks</li>
+            <li><strong>Machine Learning:</strong> Regression, Decision Trees, Forecasting</li>
+        </ul>
+        
+        <h2 class="text-center mt-2">Connect With Me</h2>
+        <p>
+            Feel free to check out my work, projects, and professional background using the links below:
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://www.linkedin.com/in/keeganrdavis/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="40px">
+            </a>
+            <a href="https://github.com/KeeganDavis" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40px">
+            </a>
+            <a href="keegan_davis_resume_2025.pdf" target="_blank">
+                <img src="output/icons/codementor.png" alt="Resume" width="40px">
+            </a>
+            <a href="https://www.datascienceportfol.io/KeeganDavis" target="_blank">
+                <img src="output/icons/filedotio.png" alt="Data Portfolio" width="40px">
+            </a>
+        </div>
+
+
+        <h2><strong>Thank You!</strong></h2>
+        <p>Thank you for taking the time to check out my project. I appreciate your interest in my work, and I hope you find the insights and visualizations useful.</p>
+
+        <div class="text-center mt-4">
+            <a href="./output/homepage.html" class="btn btn-primary">Explore the Website</a>
+        </div>
+    </div>
+
+        <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Home JS -->
+    <script src="./static/js/nfl.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 # NFL Team Stats & Trends Dashboard
-
+**Note**: This is a copy of the nfl-data-analysis repo found [here](https://github.com/KeeganDavis/nfl-data-analysis)
 ## Overview
 This project is a dynamic NFL team stats dashboard that allows users to explore team performance data from 2008 to 2024. The dashboard provides interactive charts, tables, and filtering options to analyze historical game trends, compare stats of teams, and examine key performance metrics.
 

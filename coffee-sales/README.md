@@ -19,7 +19,7 @@ coffee-sales
 ## Installation
 
 ### Prerequisites
-
+- **Excel**: Ensure you have Excel installed. If not, you can download it from [microsoft.com](https://www.microsoft.com/en-us/microsoft-365/excel#Plans-pricing).
 
 ### Setup
 1. Clone the repository:

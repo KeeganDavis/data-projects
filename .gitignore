@@ -1,8 +1,12 @@
 # Personal Notes
 notes.md
 
-# yelp large file
-yelp-reviews/data/yelp_academic_dataset_review.json
+# yelp project
+# json and csv files too large for git
+yelp-reviews/data/json/
+yelp-reviews/data/csv/
+# snowflake credentials
+yelp-reviews/snowflake_credentials.py
 
 # excel file
 ~$coffee-sales.xlsm

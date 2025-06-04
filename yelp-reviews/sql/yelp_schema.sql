@@ -43,7 +43,7 @@ SELECT
     businesses_text:business_id::STRING AS business_id,
     businesses_text:is_open::NUMBER AS is_open,
     businesses_text:review_count::NUMBER AS review_count,
-    businesses_text:stars::NUMBER AS stars,
+    businesses_text:stars::FLOAT AS stars,
     businesses_text:categories::STRING AS categories,
     businesses_text:state::STRING AS state,
     businesses_text:city::STRING AS city,
